@@ -1,0 +1,168 @@
+<p>
+    My grumpy cat is <strong>grumpy</strong>.
+</p>
+<p>
+    My grumpy cat is <strong>grumpy</strong>.
+</p>
+
+<div>
+    My grumpy cat is grumpy.
+</div>
+<div>
+    My grumpy cat is grumpy.
+</div>
+
+<!-- BLOCK vs INLINE -->
+<!-- em are inline elements; do NOT start on new line. Stay in same line. -->
+<em>first</em>
+<em>second</em>
+<em>third</em>
+<!-- p are block elements; all start on new lines -->
+<p>fourth</p>
+<p>fifth</p>
+<p>sixth</p>
+
+<!-- ATTRIBUTES -->
+<!-- Adding a class, on its own, doesn't do anything. -->
+<p class="my-cat">My cat is grumpy.</p>
+
+<input type="text" disabled></input>
+
+<!-- SPACING -->
+<p>My cat                             is grumpy.</p>
+<p>My cat &nbsp; &nbsp; &nbsp; &nbsp; is grumpy.</p>
+
+<!-- COMMENTS -->
+<!-- These delimiters to create comments. Will not be rendered. -->
+
+<!-- HEADINGS -->
+<!-- Use <h#> tags to add headers of varying sizes.
+    Biggest size is h1. Smallest size is h6. Other sizes in between.
+-->
+<h1>HUGE HEADER</h1>
+<h6>tiny header</h6>
+<h3>Mid-Sized Header</h3>
+
+<!-- PARAGRAPH -->
+<!-- <p> paragraph tags used to space out wording -->
+<p>Random paragraph text</p>
+
+<!-- DIV -->
+<!-- Used to create horizontal blocks of content.
+    Often used to organize and arrange large amount of html content,
+    nested within divs
+-->
+<div>
+    <p></p>
+    
+</div>
+
+<div>
+    <p></p>
+    
+</div>
+
+<div>
+    <p></p>
+    
+</div>
+
+<!-- SPAN -->
+<!-- Span is in-line, used to 
+
+    Below, all 3 spans render on same line, since in-line
+-->
+<span>This</span>
+<span>is</span>
+<span>Span</span>
+<!-- Below divs all on separate lines, since block elements -->
+<div>This</div>
+<div>is</div>
+<div>Span</div>
+
+<!-- LIST -->
+<!-- Nest list elements (<li>) within outer <ul>/<ol> tags
+    <ul> - unordered list (bullets)
+    <ol> - ordered list (numbers)    
+-->
+<h2>Movie List</h2>
+<ul>
+    <li>Star Wars</li>
+    <li>RRR</li>
+    <li>The Notebook</li>
+</ul>
+
+
+<!-- TABLE -->
+<!--
+    Nicely Spaces out content into a table.
+    Uses a lot of contextual nesting.
+
+    Can use order of caption, ..., ..., th, tbody, ...
+-->
+<table>
+    <!-- th - table header -->
+    <th>Username</th>
+</table>
+
+<!-- INPUT FIELDS AND LABELS -->
+<!-- Self-closing/empty element, since only use one tag
+    and use attributes to affect it only.
+-->
+<input type="input" placeholder="Type in this. I dare you."/>
+<!-- When use 'number' type, diff browsers won't react the same.
+    In Chrome, can't type characters other than numbers. In Firefox,
+    can type whatever you want.
+-->
+<input type="number" placeholder="0"/>
+<!-- Labels used to track id usage..? -->
+<label for="date-of-birth">
+    <input id="date-of-birth" type="date">
+</label>
+
+<!-- Drop Down List -->
+<select>
+    <option value="FACULTY">Faculty</option>
+    <option value="STUDENTS">Students</option>
+    <option value="STAFF">Staff</option>
+</select>
+
+<!-- If element not nested properly (e.g. commented out above
+    <select> tags), defaults to basic div
+-->
+<!-- <select> -->
+    <option value="FACULTY">Faculty</option>
+    <option value="STUDENTS">Students</option>
+    <option value="STAFF">Staff</option>
+<!-- </select> -->
+
+<button type="button">Delete</button>
+
+<!-- FORMS -->
+<!--
+    Certain behaviors will occur, once interact with this.
+    Not used as often anymore.
+-->
+<form action="https://google.com" method="get">
+    <label for="name">Enter your name:</label>
+    <input type="text" name="name"/>
+    <label for="email">Enter your email:</label>
+    <input type="text" name="email" />
+    <input type="submit" />
+</form>
+
+<!-- ANCHORS -->
+<!--
+    <a>
+    Used to create links to others sites. (using href attribute)
+    Also used to open email/phone clients.
+-->
+<a href="https://google.com">Hello World</a>
+<a href="https://google.com"><img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"/></a>
+
+<!-- MARQUEE -->
+<!--
+    Content moves across page horizontally, like with old websites.
+    Meant to be deprecated long ago
+-->
+<marquee>Hello...</marquee>
