@@ -1,5 +1,6 @@
 .red-box {
     background-color: red;
+    border: none;
     width: 100px;
     height: 100px;
 }
@@ -12,4 +13,10 @@
     position: fixed;
     display: flex;
 
+}
+
+@media (min-width: 600px) {
+    .red-box {
+        border: purple solid 5px;
+    }
 }
