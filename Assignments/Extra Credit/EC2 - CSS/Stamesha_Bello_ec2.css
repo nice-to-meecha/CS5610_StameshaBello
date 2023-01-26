@@ -1,0 +1,15 @@
+.red-box {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.red-box:hover {
+    background-color: green;
+}
+
+.horizontal-flex-container {
+    position: fixed;
+    display: flex;
+
+}
