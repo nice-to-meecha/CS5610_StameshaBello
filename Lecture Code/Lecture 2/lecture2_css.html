@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My Website Title</title>
+        <style>
+            /*
+                Makes text of all divs purple and cascades down
+                to all child elements of divs
+            
+            div {
+                color: purple;
+            }
+            */
+
+            /* period (.) in front of selector indicates CLASS */
+            .purple-class {
+                color: purple;
+            }
+
+            .blue-class {
+                color: blue;
+            }
+
+            .font-large {
+                font-size: 32px;
+            }
+
+            .font-normal {
+                font-size: 16px;
+            }
+
+            .font-small {
+                font-size: 4px;
+            }
+
+            /* hashtag/pound (#) indicates ID */
+            #Title {
+                font-size: 64px;
+                color: burlywood;
+            }
+
+            /* #TitleSecond {
+                background-color: yellow;
+            } */
+
+            .color-text {
+                color: skyblue;
+            }
+
+            .color-text3 {
+                color: rgb(110, 38, 14); /* burnt umber */
+            }
+
+            .color-text4 {
+                color: rgb(110, 38, 14, 0.3); /* burnt umber; less opacity */
+            }
+
+            .container {
+                font-size: 24px;
+            }
+
+            .container-big-text {
+                font-size: 36px;
+                color: brown;
+            }
+
+            .zoom-in {
+                font-size: 140%;
+            }
+
+            @media(max-width: 400px) {
+                .container-big-text {
+                    font-size: 48px;
+                    color:green;
+                }
+            }
+
+            .blue-box {
+                background-color: blue;
+            }
+
+            .turqoise-box {
+                background-color: darkturquoise;
+            }
+
+            .orange-box {
+                background-color: orange;
+            }
+
+            .small-box {
+                height: 25px;
+                width: 25px;
+                border: 1px solid black;
+            }
+
+            .medium-box {
+                height: 50px;
+                width: 50px;
+                border: 1px solid black;
+                padding: 10px;
+                margin: 5px;
+            }
+
+            .large-box {
+                height: 100px;
+                width: 100px;
+                border: 1px solid black;
+            }
+
+            .shift-right {
+                position: relative;
+                left: 25px;
+                top: 25px;
+            }
+
+            .shift-absolute {
+                position: absolute;
+                left: 25px;
+                top: 5px;
+            }
+
+            .shift-fixed {
+                position: fixed;
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .navbar {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                background-color: purple;
+                width: 100%;
+                height: 50px;
+            }
+
+            .shift-sticky {
+                position: sticky;
+                top: 50px;
+            }
+
+            /*
+                Ignores normal flow of page, ignoring block properties
+                and allowing text to wrap around it
+            */
+            .wraparound {
+                float: left;
+            }
+
+            .flex-container {
+                background-color: cornflowerblue;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .flex-box {
+                height: 50px;
+                width: 33%;
+                padding: 10px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div>
+            <h1>Hello, my friend</h1>
+            Do you like my cat?
+        </div>
+
+        <h1>Have a good day!</h1> -->
+
+        <!-- id
+            Used to identify a single element on the page.
+            Only accepts a SINGLE argument
+                eg id="Title"
+
+            If try to add more elements, will not work.
+            (Will lose any associated styling)
+                INCORRECT -- eg id="Title TitleSecond"
+        -->
+        <div id="Title">The title of my webpage</div>
+        <div class="purple-class font-small">My dog is cute</div>
+        <div class="blue-class font-normal">My cat is cuter</div>
+        <div class="purple-class font-large">My daughter is cutest</div>
+
+        <!--
+            What if used two attributes that have contradicting properties/values?
+                Will just pick one.
+                In developer console, will cross out the one that is not used.
+
+            Selects value according to order in which CSS is defined (e.g. in
+            style tags above).
+                Since font-small is physically defined above font-large,
+                will select font-small.
+                If move 
+        -->
+        <div class="purple-class font-small font-large">My dog is cute</div>
+
+        <!-- Colors -->
+        <div class="color-text">This text is sky-blue in color</div>
+        <div class="color-text3">This text is burnt umber in color</div>
+        <div class="color-text4">This text is burnt umber in color, with lower opacity.</div>
+
+        <!-- Numbers -->
+        <div class="container">
+            <!--
+                Font size is overridden by font-small, since class is above container (??)
+            -->
+            <div class="font-small">My cat is gray</div>
+            <!--
+                zoom-in percentage changes size of font, RELATIVE to font-size of parent element.
+                So, container has font-size 24px; 140% of 24px is 33.6px
+            -->
+            <div class="zoom-in">My dog is black</div>
+            <div>My other cat is brown</div>
+        </div>
+
+        <p></p>
+
+        <div class="container-big-text">
+            <div class="font-small">My cat is gray</div>
+            <!--
+                zoom-in: container-big-text has font-size 36px; 140% of 36px is 50.4px
+            -->
+            <div class="zoom-in">My dog is black</div>
+            <div>My other cat is brown</div>
+        </div>
+
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box shift-sticky"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+        <div class="blue-box medium-box"></div>
+        <div class="turqoise-box large-box"></div>
+
+        <p></p>
+        <p></p>
+        <p></p>
+        
+        <div class="turqoise-box large-box">
+            <div class="blue-box medium-box shift-absolute"></div>
+            <div class="blue-box medium-box shift-absolute"></div>
+        </div>
+
+        <div class="blue-box small-box shift-fixed"></div>
+        <div class="navbar"></div>
+
+        <p></p>
+        <div class="turqoise-box medium-box wraparound"></div>
+        <p>fierfwefw;ldmwefefrpegfmefvgmefem;gmregmrekgmgmsgmk
+            rmgkgmkagmekrgmaemgakgm;egme;gm;gtmgmeag;lmetgmalgm
+            emgk;egmk;tgmegmslmaegmeglm;gtmlagtmlsml;gm;lgmlgml;
+            mk;gvmesgma;egmrael;gme;gmel;rmgl;em;lrmgmgl;rmg;m
+            mfkemkmgeamg;gmlgmeagmlr;gmalermla;gmr;lmg;rmgrgmla;m
+            fmegsmerfgmasl;emrggmergsaslm;amrfm,aregre.garegov;laemr
+            fmvzd;fmkzdsvmfzvrfvma;evgrml;vmrel;;lmmvrea;lmrle;rml;
+            fma;efrmlagm;r,egaeirgtjoetgoepgkjt;gmrtg43t0435-q5egpojm
+            vnelrflkgmrfgvknketngvskglnbajtbgtrjklgnsktlrgnkltngkln
+            fgnklengvkltnlkvnglgnklgnlknrlgnreagntkengktlnklgnkgnk
+            nvgeklngtklanglkangelkngangkagnaklgnklntgkgnktlgnklngkn
+        </p>
+
+        <div class="blue-box medium-box">Hello</div>
+        <div class="blue-box medium-box">Hello</div>
+        <div class="blue-box medium-box">Hello</div>
+
+        <p></p>
+
+        <div class="flex-container">
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+            <div class="orange-box flex-box"></div>
+        </div>
+        
+    </body>
+</html>
