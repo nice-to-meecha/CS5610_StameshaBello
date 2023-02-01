@@ -8,6 +8,10 @@
         Resources:
             - Vertically center text: 
                 https://www.w3docs.com/snippets/css/how-to-vertically-center-text-with-css.html#use-css-flexbox-8
+            - Padding-top for dynamic square height:
+                https://css-tricks.com/aspect-ratio-boxes/
+            - Creating rows with flexbox, using separate elements:
+                https://drstearns.github.io/tutorials/flexbox/
     -->
     <head>
         <meta charset="utf-8" />
@@ -24,18 +28,43 @@
                 width: 100%;
                 align-items: center;
                 justify-content: center;
-                height: 15%;
+                height: 150px;
                 font-size: xx-large;
             }
 
-            .hundred-boxes {
+            .hundred-boxes-container {
                 display: flex;
+                flex-wrap: wrap;
+                margin-top: 155px;
+                width: 100%;
+                flex: 1 1 33.333%;
+            }
+
+            .box-row {
+                display: flex;
+                width: 100%;
             }
 
             .contact-table {
-                position: absolute;
-                top: 15%;
                 text-align: left;
+            }
+
+            .hundred-boxes {
+                width: 30%;
+                padding-top: 30%;
+                margin: 5px 0px 0px 5px;
+            }
+
+            .beige-box {
+                background-color: #FDE49C;
+            }
+
+            .yellow-box {
+                background-color: #FFB740;
+            }
+
+            .orange-box {
+                background-color: #DF711B;
             }
         </style>
     </head>
@@ -69,8 +98,175 @@
                 stretch out: all boxes should be uniform, even if there are not
                 enough to complete a final row.
         -->
-        <div class="hundred-boxes">
-
+        <div class="hundred-boxes-container">
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+                <div class="hundred-boxes yellow-box"></div>
+                <div class="hundred-boxes orange-box"></div>
+            </div>
+            <div class="box-row">
+                <div class="hundred-boxes beige-box"></div>
+            </div>
         </div>
 
         <!--
