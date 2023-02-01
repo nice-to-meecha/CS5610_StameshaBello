@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
+    <!--
+        Name: Stamesha Bello
+        Date: 1/31/2023
+        MA 2: Header, Boxes, and Table
+
+        Resources:
+            - Vertically center text: 
+                https://www.w3docs.com/snippets/css/how-to-vertically-center-text-with-css.html#use-css-flexbox-8
+    -->
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>MA 2: Header, Boxes, and Table</title>
         <style>
-            .header {
+            .header-box {
+                display: flex;
+                background-color: cornflowerblue;
+                color: white;
                 position: fixed;
                 top: 0px;
                 left: 0px;
                 width: 100%;
-                text-align: center;
-                /* padding: 10% 0; */
-                background-color: cornflowerblue;
-                color: white;
+                align-items: center;
+                justify-content: center;
                 height: 15%;
                 font-size: xx-large;
+            }
+
+            .hundred-boxes {
+                display: flex;
+            }
+
+            .contact-table {
+                position: absolute;
+                top: 15%;
+                text-align: left;
             }
         </style>
     </head>
@@ -35,8 +55,8 @@
                 will not need to use the <header> tag, but may play with it
                 if you choose to.
         -->
-        <div class="header">
-            Stamesha Bello
+        <div class="header-box">
+            <h1>Stamesha Bello</h1>
         </div>
 
         <!--
@@ -49,6 +69,9 @@
                 stretch out: all boxes should be uniform, even if there are not
                 enough to complete a final row.
         -->
+        <div class="hundred-boxes">
+
+        </div>
 
         <!--
             Task 3: Table
@@ -60,12 +83,9 @@
                 are welcome to use fake data.
         -->
 
-        <h3>Contact Info</h3>
-
-        <table>
+        <table class="contact-table">
             <thead>
-                <th>Form of Contact</th>
-                <th>Value</th>
+                <th>Contact Info</th>
             </thead>
             <tbody>
                 <tr>
@@ -75,15 +95,53 @@
 
                 <tr>
                     <td>Phone Number</td>
-                    <td>(123) 456-7890</td>
+                    <td>(682)558-2984</td>
                 </tr>
 
                 <tr>
                     <td>GitHub</td>
-                    <td>Git_git_git_outta_here</td>
+                    <td>nice_to_meecha</td>
                 </tr>
             </tbody>
         </table>
 
     </body>
+
+    <!-- Instructions
+        Rubric:
+        Task 1 - 10 Points
+        Task 2 - 10 Points
+        Task 3 - 10 Points
+        Well Formatted HTML and CSS - 5 points
+
+        Task 1: Header 
+        Use existing HTML tags to create a new header.  This header should stretch completely across the screen,
+        and as users scroll up and down the page the header should remain at the top of the page.  When the page
+        loads, it should not cover any content on the page, though it may cover content as users scroll down.
+        The header should be filled with a single solid color of your choosing, and should have your name centered
+        (horizontally and vertically) in the header.  All other attributes (height, etc.) can be determined by you.
+        Tip: you will not need to use the <header> tag, but may play with it if you choose to.
+
+        Task 2: Flex Columns 
+        Create 100 boxes using HTML and CSS.  These boxes should be different colors (at least 3), and a different
+        color from the header (so you can copy and paste the same box 100 times.)  Using CSS flex, put the boxes
+        into 3 different columns that are equally spaced apart.  The final row should not shrink or stretch out:
+        all boxes should be uniform, even if there are not enough to complete a final row.
+
+        Task 3: Table with Contact Information
+        At the bottom of the page, add a table that includes at least 2 ways to contact you: one column should say
+        what form of contact this is (email, phone number, Github, school email, etc), the other is the actual
+        information.  If you don’t have this information or don’t wish to share it in this project, you are welcome
+        to use fake data.
+
+        Well Formatted HTML and CSS
+            Your HTML and CSS must be readable and understandable.  This means:
+                HTML lines should not be too long (if an element has more than 2 attributes, they should each have their own line
+                Class and ID names should be explicit (for example, ‘MainBlueHeader’ is better than ‘blue’)
+                All CSS must be in the style tag (none should be in the HTML)
+
+        Deliverables
+            Submit a SINGLE HTML document containing both your HTML and CSS to Canvas before the start of the
+            next class.  Please name your file {firstname}_{lastname}_ma2.html (leave out the curly brackets.)
+    -->
 </html>
