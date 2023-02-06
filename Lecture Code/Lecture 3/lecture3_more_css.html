@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            body > * {
+                margin: 5px;
+            }
+            .medium-box {
+                height: 50px;
+                width: 50px;
+                border: 1px solid black;
+                padding: 10px;
+                margin: 5px;
+            }
+            .turqoise-box {
+                background-color: turquoise;
+            }
+
+            /*
+                flex-wrap: wrap -- If all boxes do not fit on single row,
+                will fall to next row(s)
+            */
+            .container {
+                background-color: fuchsia;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+            }
+
+            .box, .square {
+                height: 50px;
+                width: 50px;
+                border: 1px black solid;
+            }
+
+            .box {
+                background-color: purple;
+            }
+
+            /*
+                Can define variables, using two dashes (e.g. --variable: 32px;)
+            */
+            :root {
+                --main-color: green;
+            }
+
+            .square {
+                background-color: var(--main-color);
+                transition: 500ms;
+            }
+
+            .square:hover {
+                background-color: purple;
+                width: 80px;
+                height: 80px;
+                transform: rotate(360deg);
+            }
+
+            /*
+                If have group of same type of elements with same parent,
+                considered siblings. To use first-/last-child selectors,
+                need to start with sibling class and then use colon and
+                add appropriate pseudo class to select specific child,
+                amongst those existing
+            */
+            .square:first-child {
+                height: 60px;
+                width: 60px;
+            }
+
+            .square:last-child {
+                height: 40px;
+                width: 40px;
+            }
+
+            .square:nth-child(3) {
+                height: 20px;
+                width: 20px;
+            }
+
+            .check-list {
+
+            }
+
+            /*
+                Adds the provided content immediately before
+                each element with the 'completed' class 
+            */
+            .completed::before {
+                content: "o"
+            }
+
+            .story::first-letter {
+                background-color: red;
+                font-size: 200%;
+            }
+
+            .story::selection {
+                background-color: yellow;
+            }
+
+            .front-row {
+                text-decoration: underline;
+            }
+
+            .back-row {
+                font-size: 8px;
+            }
+
+            #Title {
+                color: green;
+                text-decoration: underline dashed blue;
+            }
+
+            .color-blue {
+                color: blue;
+            }
+
+            .color-red {
+                color: red;
+            }
+
+            .blue-circle {
+                background-color: blue;
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+                border: 1px solid gray;
+            }
+
+            /* div {
+                background-color: black;
+            } */
+
+            #MainCircle {
+                background-color: green;
+            }
+
+            .text-box {
+                font-size: 18px;
+            }
+
+            .double-size {
+                font-size: 200%;
+            }
+
+            /*
+                Applies anytime a screen is <= 400px wide
+            */
+            @media(max-width: 400px) {
+                .blue-circle {
+                    background-color: aquamarine;
+                    border-radius: 50%;
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+
+            .shifted-relative {
+                position: relative;
+                top: -25px;
+                left: 25px;
+            }
+
+            .big-square {
+                height: 200px;
+                width: 200px;
+                background-color: green;
+                position: relative;
+                top: 0px;
+            }
+
+            .shifted-absolute {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
+
+            .shifted-fixed {
+                position: fixed;
+                bottom: -25px;
+                right: 25px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <!--
+            All elements within the closing tag of a different
+            element are all children of that ancestral element.
+
+            Flex CSS of parent element affects all children
+
+            csstricks.com useful for learning flex
+
+            With flex, if nowrap, will shrink boxes
+        -->
+        <div class="container">
+            <div class="turqoise-box medium-box">1</div>
+            <div class="turqoise-box medium-box">2</div>
+            <div class="turqoise-box medium-box">3</div>
+            <div class="turqoise-box medium-box">4</div>
+            <div class="turqoise-box medium-box">5</div>
+        </div>
+
+        <div class="square"></div>
+
+        <div class="square-parent">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <div class="check-list">
+            <div class="completed">Go to work</div>
+            <div class="completed">Prepare for class</div>
+            <div>Go to sleep</div>
+        </div>
+
+        <div class="story">
+            Once upon a time
+        </div>
+
+        <h4 class="front-row">Class</h4>
+        <div class="front-row">Does care</div>
+        <div class="back-row">Doesn't care</div>
+
+        <h1 id="Title">Class</h1>
+
+        <!--
+            Color cascades from parent to child, unless something
+            in child overrides the parent element
+        -->
+        <div class="color-blue">
+            This is just a div
+            <h1>Hello!</h1>
+            <h1 class="color-red">No</h1>
+        </div>
+
+        <div id="MainCircle" class="blue-circle"></div>
+
+        <div class="text-block">
+            <div class="double-size">This is the first sentence.</div>
+            <div>This is the second sentence.</div>
+        </div>
+
+        <div class="blue-circle"></div>
+
+        <div class="blue-circle"></div>
+        <div class="blue-circle shifted-relative"></div>
+        <div class="blue-circle"></div>
+
+        <div class="big-square">
+            <div class="shifted-absolute">X</div>
+        </div>
+
+        <div class="blue-circle shifted-fixed"></div>
+    </body>
+</html>

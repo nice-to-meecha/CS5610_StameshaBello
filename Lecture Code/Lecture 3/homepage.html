@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                /* height: 50px;
+                width: 50px; */
+                background: aquamarine;
+                border: 1px solid gray;
+            }
+
+            .container {
+                display: flex; /* Says want flex styling for container/children */
+                background-color: hotpink;
+                /* flex-direction: row-reverse; */
+                justify-content: center;
+                height: 100px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .grid-container {
+                display: grid;
+                background-color: hotpink;
+                /* grid-template-columns
+                    number of columns, according to their sizes
+                    
+                    50px 100px 75px ==> 3 columns, with sizes of
+                    50px, 100px, and 75px, in that order
+                */
+                grid-template-columns: 50px 100px 75px;
+
+                /*
+                    If specify fewer rows than needed,
+                    remaining rows will have default height, based
+                    on content height.
+
+                    Can use repeat() function (repeat(# repeats, ...row_sizes)),
+                    in order to repeat row sizes, up to number of repeats
+                    specified
+                */
+                grid-template-rows: 100px 50px;
+            }
+
+            .grid-container2 {
+                display: grid;
+                background-color: hotpink;
+                /* grid-template-columns
+                    number of columns, according to their sizes
+                    
+                    50px 100px 75px ==> 3 columns, with sizes of
+                    50px, 100px, and 75px, in that order
+                */
+                grid-template-columns: 50px 100px 75px;
+
+                /*
+                    If specify fewer rows than needed,
+                    remaining rows will have default height, based
+                    on content height.
+
+                    Can use repeat() function (repeat(# repeats, row sizes separated by spaces NOT commas)),
+                    in order to repeat row sizes, up to number of repeats
+                    specified
+                */
+                grid-template-rows: repeat(10, 100px 50px);
+                grid-template-areas:
+                    "header header header"
+                    "body body sidebar"
+                    "body body sidebar";
+            }
+
+            .header-content {
+                grid-area: header;
+            }
+
+            .body-content {
+                grid-area: body;
+            }
+
+            .sidebar-content {
+                grid-area: sidebar;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Flex allows overriding of typical div behavior to be blocks; naturally inline-->
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="grid-container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+
+        <div class="grid-container2">
+            <div class="box header-content">1</div>
+            <div class="box header-content">2</div>
+            <div class="box header-content">3</div>
+            <div class="box body-content">4</div>
+            <div class="box body-content">5</div>
+
+            <div class="box sidebar-content">1</div>
+            <div class="box body-content">2</div>
+            <div class="box body-content">3</div>
+            <div class="box sidebar-content">4</div>
+        </div>
+
+    </body>
+</html>
