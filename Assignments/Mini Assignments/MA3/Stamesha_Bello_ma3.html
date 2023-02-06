@@ -38,6 +38,9 @@
                 grid-area: main-content;
                 background-color: coral;
                 border: 1px solid brown;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .right-sidebar {
@@ -50,6 +53,19 @@
                 grid-area: footer;
                 background-color: firebrick;
                 border: 1px solid forestgreen;
+            }
+
+            .growing-box {
+                width: 60px;
+                height: 60px;
+                background-color: dodgerblue;
+                transition: 500ms;
+            }
+
+            .growing-box:hover {
+                width: 120px;
+                height: 120px;
+                background-color: greenyellow;
             }
 
         </style>
@@ -81,18 +97,19 @@
                 <h1 class="name">Stamesha Bello</h1>
             </div>
             <div class="left-sidebar"></div>
-            <div class="main-content"></div>
+            <div class="main-content">
+                <!--
+                    Task 2: Transition and Hover
+                        Use flex to center (both height and width) a box as seen above.
+                        The box should be 60px X 60px and can be any color of your choosing.
+                        When your mouse hovers over the box, it should grow to 120px X 120px
+                        and change to a different color in .5 seconds.
+                -->
+                <div class="growing-box"></div>
+            </div>
             <div class="right-sidebar"></div>
             <div class="footer"></div>
         </div>
-
-        <!--
-            Task 2: Transition and Hover
-                Use flex to center (both height and width) a box as seen above.
-                The box should be 60px X 60px and can be any color of your choosing.
-                When your mouse hovers over the box, it should grow to 120px X 120px
-                and change to a different color in .5 seconds.
-        -->
 
         <!--
             Task 3: Clean and readable code
