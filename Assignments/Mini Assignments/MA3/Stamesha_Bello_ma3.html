@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <style>
+
+            .grid-template {
+                display: grid;
+                grid-template-columns: 100px 400px 100px;
+                grid-template-rows: 100px 400px;
+                grid-template-areas:
+                    "header header header"
+                    "left-sidebar main-content right-sidebar"
+                    ;
+            }
+
+            .header {
+                grid-area: header;
+                background-color: aqua;
+                border: 1px solid orange;
+            }
+
+            .left-sidebar {
+                grid-area: left-sidebar;
+                background-color: black;
+                border: 1px solid white;
+            }
+
+            .main-content {
+                grid-area: main-content;
+                background-color: coral;
+                border: 1px solid brown;
+            }
+
+            .right-sidebar {
+                grid-area: right-sidebar;
+                background-color: darkseagreen;
+                border: 1px solid purple;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--
+            Rubric:
+                Page Template with Grid - 10 points
+                Transition and Hover - 10 points
+                Clean and readable code - 5 points
+
+
+            Task 1: Page Template with Grid
+                Use CSS grid to recreate the page layout above.  Have a header,
+                left and right side bars, footer and main content area (where
+                that expanding box resides).  The main content area should be
+                4 times the height of the footer or header; the width of the
+                main content area should be 4 times the width of either sidebar.
+                Please set borders and backgrounds so the graders can clearly
+                see the components.  Also, ignore the text content in the left
+                side bar - that is just for demonstration purposes.
+
+                Also, use flex to center your name in an H1 tag in the center
+                (both height and width).
+        -->
+        <div class="grid-template">
+            <div class="header"></div>
+            <div class="left-sidebar"></div>
+            <div class="main-content"></div>
+            <div class="right-sidebar"></div>
+        </div>
+
+        <!--
+            Task 2: Transition and Hover
+                Use flex to center (both height and width) a box as seen above.
+                The box should be 60px X 60px and can be any color of your choosing.
+                When your mouse hovers over the box, it should grow to 120px X 120px
+                and change to a different color in .5 seconds.
+        -->
+
+        <!--
+            Task 3: Clean and readable code
+                As always, it is important that your code and style are well formed.  
+
+            Deliverables
+                Submit a single HTML document containing both your HTML and CSS
+                (for grading simplicity, please put this into a <style> tag). 
+                Please name your file {firstname}_{lastname}_ma3.html
+                (leave out the curly brackets.)
+        -->
+
+    </body>
+</html>
