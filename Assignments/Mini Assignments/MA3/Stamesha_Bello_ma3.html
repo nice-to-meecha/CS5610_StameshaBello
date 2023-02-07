@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<!--
+    Name: Stamesha Bello
+    Date: 2/6/2023
+    MA3: CSS+
+
+    Resources:
+        - Adding background for entire page:
+            https://stackoverflow.com/questions/9648910/how-to-set-the-background-color-of-the-whole-page-in-css
+        - Centering entire grid (justify-content):
+            https://css-tricks.com/snippets/css/complete-guide-grid/
+        - Using view port units:
+            https://stackoverflow.com/questions/48717013/how-to-specify-width-of-any-inner-element-as-a-percentage-of-width-of-body
+        - Color Picker:
+            https://imagecolorpicker.com/en
+        - Color palette inspiration:
+            https://i.pinimg.com/originals/f2/e4/fe/f2e4fe00a14fb39aa9100ef302a08922.png
+        - Font family:
+            https://fonts.google.com/specimen/Montserrat
+
+-->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -6,8 +26,15 @@
             name="viewport"
             content="width=device-width, initial-scale=1"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
         <style>
-            
+
+            html {
+                background-color: #e5c696;
+            }
+
             .grid-template {
                 height: 75vh;
                 display: grid;
@@ -23,23 +50,27 @@
 
             .header {
                 grid-area: header;
-                background-color: aqua;
-                border: 1px solid orange;
+                background-color: #7aab98;
+                color: #ededed;
+                border: 3px solid #ededed;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-family: 'Montserrat', sans-serif;
             }
 
             .left-sidebar {
                 grid-area: left-sidebar;
-                background-color: black;
-                border: 1px solid white;
+                /* background-color: ; */
+                border: 3px solid #ededed;
+                background-color: #b4cec3;
             }
 
             .main-content {
                 grid-area: main-content;
-                background-color: coral;
-                border: 1px solid brown;
+                background-color: #ededed;
+                border: 3px solid #cc5500;
+                /* background-image: linear-gradient(180deg, rgba(253,238,208,1) 0%, rgba(243,165,126,1) 20%, rgba(243,165,126,1) 80%, rgba(0,212,255,1) 100%); */
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -47,27 +78,27 @@
 
             .right-sidebar {
                 grid-area: right-sidebar;
-                background-color: darkseagreen;
-                border: 1px solid purple;
+                background-color: #b4cec3;
+                border: 3px solid #ededed;
             }
 
             .footer {
                 grid-area: footer;
-                background-color: firebrick;
-                border: 1px solid forestgreen;
+                background-color: #7aab98;
+                border: 3px solid #ededed;
             }
 
             .growing-box {
                 width: 60px;
                 height: 60px;
-                background-color: dodgerblue;
+                background-color: #cc5500;
                 transition: 500ms;
             }
 
             .growing-box:hover {
                 width: 120px;
                 height: 120px;
-                background-color: greenyellow;
+                background-color: #7aab98;
             }
 
         </style>
