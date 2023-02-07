@@ -7,16 +7,18 @@
             content="width=device-width, initial-scale=1"
         />
         <style>
-
+            
             .grid-template {
+                height: 75vh;
                 display: grid;
-                grid-template-columns: 100px 400px 100px;
-                grid-template-rows: 100px 400px 100px;
+                grid-template-columns: 16% 64% 16%;
+                grid-template-rows: 16% 64% 16%;
                 grid-template-areas:
                     "header header header"
                     "left-sidebar main-content right-sidebar"
-                    "footer footer footer"
-                    ;
+                    "footer footer footer";
+                justify-content: center;
+                align-content: center;
             }
 
             .header {
