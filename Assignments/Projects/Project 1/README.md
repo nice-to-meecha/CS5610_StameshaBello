@@ -16,3 +16,9 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
+
+### Resources
+- Contact Page design inspiration:
+   https://images01.nicepagecdn.com/page/64/21/website-design-preview-64211.jpg
+- Made preliminary site design with LucidChart
+   https://lucid.app/lucidchart/d19480fc-243d-41e9-a869-cfbf1e95b05c/edit?beaconFlowId=A27443F4FAE8D6AA&invitationId=inv_fa33e67d-15fd-441e-ac15-a9098ad52506&page=0_0#
