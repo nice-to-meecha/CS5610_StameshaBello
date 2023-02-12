@@ -16,6 +16,7 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
+   3 hours, so far
 
 ### Resources
 - Contact Page design inspiration:

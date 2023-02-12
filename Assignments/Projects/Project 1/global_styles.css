@@ -1,2 +1,61 @@
-/* --primary_color */
-/* --secondary_color */
+:root {
+    --navbar-height: 10%;
+    /* --primary_color */
+    /* --secondary_color */
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: var(--navbar-height);
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    gap: 1%;
+}
+
+.navbar-link {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 8px 4px;
+    width: 5%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-link-current-page {
+    background-color: black;
+    color: white;
+}
+
+.navbar-link::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+.navbar-link:hover::before {
+    transform: translateX(0);
+}
+
+.navbar-link:hover {
+    color: white;
+    border-color: orange;
+}
