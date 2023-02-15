@@ -21,8 +21,7 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
-   4 hours, so far
-   1:15am - 
+   8 1/2 hours, so far
 
 ### Resources
 - Contact Page design inspiration:
@@ -37,3 +36,7 @@ sentences per bullet point):
    https://sabe.io/blog/css-set-img-src
 - Hovering dropdown
    https://www.w3schools.com/css/css_dropdowns.asp
+- Icons
+   - Email: https://www.svgrepo.com/show/137590/email.svg
+   - GitHub: https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg
+   - Home Assistant Logo: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/1200px-Home_Assistant_Logo.svg.png

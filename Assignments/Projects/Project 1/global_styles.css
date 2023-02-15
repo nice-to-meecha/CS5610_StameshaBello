@@ -67,9 +67,10 @@ body {
 }
 
 .navbar-title {
-    /* font-size: x-large; */
     position: absolute;
     left: 1%;
     width: fit-content;
     border: none;
+    text-decoration: none;
+    color: black;
 }
