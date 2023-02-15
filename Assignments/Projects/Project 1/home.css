@@ -1,7 +1,44 @@
 .home-page-greeting {
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: var(--primary-color);
     color: white;
-    margin-bottom: 100px;
+    /* background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 40px ), repeating-linear-gradient( #444cf755, #444cf7 ); */
+    /* background-image: radial-gradient( ellipse farthest-corner at 40px 40px , #444cf7, #444cf7 50%, #e5e5f7 50%);
+    background-size: 40px 40px; */
+    /* margin-bottom: 100px; */
+    display: flex;
+}
+
+.home-page-greeting-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.experience-section {
+    width: 100%;
+    height: 100vh;
+}
+
+.technical-knowledge {
+    width: 100%;
+    height: 50vh;
+    background-color: var(--primary-color);
+}
+
+.education-section {
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
+    display: flex;
+    font-size: xx-large;
+}
+
+.UT-tower {
+    height: 100vh;
 }
