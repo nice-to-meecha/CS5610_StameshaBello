@@ -8,10 +8,24 @@
 
 .contact-table {
     width: 50%;
+    /* border-collapse: collapse; */
+    border-spacing: 1em;
 }
 
 .contact-table td {
-    border: 1px solid gray;
     width: 25%;
-    padding-top: 25%;
+    min-height: fit-content;
+    height: calc((100vh - var(--navbar-height)) / 4);
+    max-height: calc((100vh - var(--navbar-height)) / 4);
+    aspect-ratio: 1 / 1;
+    text-align: center;
+}
+
+.link-only-cell {
+    border: 5px solid gray;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 100%;
 }

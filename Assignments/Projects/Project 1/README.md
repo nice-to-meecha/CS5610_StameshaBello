@@ -21,7 +21,7 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
-   8 1/2 hours, so far
+   Maybe 12 1/2 or so.
 
 ### Resources
 - Contact Page design inspiration:
@@ -40,3 +40,8 @@ sentences per bullet point):
    - Email: https://www.svgrepo.com/show/137590/email.svg
    - GitHub: https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg
    - Home Assistant Logo: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/1200px-Home_Assistant_Logo.svg.png
+   - LinkedIn Logo: https://www.svgrepo.com/download/108614/linkedin.svg
+- How to use an svg
+   https://css-tricks.com/using-svg/
+- Using anchor tag for e-mails
+   https://www.computerhope.com/issues/ch000056.htm
