@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta   
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <title>Test Page</title>
+    </head>
+
+    <body>
+        <div id="clock">Hello! Welcome to my interactive page!</div>
+
+        <script>
+            // JS MUST be in <script> tags, otherwise will render as HTML
+            // <script> typically kept within HTML <body>
+            console.log("Hello, I'm being run on your browser!");
+
+            // Searches the page for an element with the id of 'clock'
+            const clockDiv = document.getElementById("clock");
+            // clockDiv.textContent = "Hello, I'm a clock. :)"
+            clockDiv.textContent = new Date().toTimeString();
+            console.log("Hello, from the bottom of the page!");
+
+            // When interact with webpage, it emits an event
+                // e.g. click event, animation event, etc
+
+            // Want to update time when click on it
+            // addEventListener(), takes event name and callback function
+            // as arguments
+            clockDiv.addEventListener("click", updateTimeDiv);
+            
+            // Can add styling with JS (in addition to CSS)
+            clockDiv.style.color = "red";
+
+            function updateTimeDiv() {
+                clockDiv.textContent = new Date().toTimeString();
+            }
+
+            // Keyboard event has information about how keyboard
+            // interacts with page
+            const body = document.getElementsByTagName("body")[0];
+            const inputField = document.createElement("input");  // Creating input form
+            body.appendChild(inputField);  // Adds new input form to body
+
+            // keydown event (documentation on MDN's website) will
+            // throw event when key is pressed
+            inputField.addEventListener("keydown", pressedA)
+
+            function pressedA(event) {
+                if (event.key === 'a') {
+                    excitableField.textContent = "HURRAY!";
+                } else {
+                    excitableField.textContent = '';
+                }
+            }
+
+            const excitableField = document.createElement("div");
+            body.appendChild(excitableField);
+
+            const button = document.createElement("button");
+            button.textContent = "Verify"
+            body.appendChild(button);
+
+            const validNameDisplay = document.createElement("div")
+            body.appendChild(validNameDisplay);
+
+            function validateName(event) {
+                const inputValue = inputField.value;
+                if (!inputValue.length) {
+                    validNameDisplay.textContent = "Please enter a name";
+                    validNameDisplay.style.color = "red";
+                } else if (inputValue[0] === inputValue[0].toUpperCase()) {
+                    validNameDisplay.textContent = "Properly formatted";
+                    validNameDisplay.style.color = "green";
+                } else {
+                    validNameDisplay.textContent = "Invalid";
+                    validNameDisplay.style.color = "red";
+                }
+                button.setAttribute("disabled", true);
+            }
+
+            button.addEventListener("click", validateName)
+
+            // Typically won't interact directly with DOM or window like this
+            // Typically use a framework like React
+
+            /*
+                Web Components
+                    - Allow you to create a single component that can be used
+                      multiple times
+            */
+
+            const clockIdSelected = document.querySelector("#clock");
+            console.log(clockIdSelected);
+        </script>
+    </body>
+</html>
