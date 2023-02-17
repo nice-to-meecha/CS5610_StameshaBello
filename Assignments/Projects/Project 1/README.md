@@ -29,7 +29,8 @@ sentences per bullet point):
 - Made preliminary site design with LucidChart
    https://lucid.app/lucidchart/d19480fc-243d-41e9-a869-cfbf1e95b05c/edit?beaconFlowId=A27443F4FAE8D6AA&invitationId=inv_fa33e67d-15fd-441e-ac15-a9098ad52506&page=0_0#
 - Using object-fit to maintain aspect ratio
-   https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+   - https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+   - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 - Using repeat() for grid rows
    https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
 - Alternative to changing img src attribute (background image content)
@@ -77,4 +78,6 @@ sentences per bullet point):
    https://cloudfour.com/thinks/css-circles/
 - Radial gradient
    https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient
+- Square layout with grid
+   https://stackoverflow.com/questions/54927180/css-grid-square-layout
 

@@ -1,22 +1,19 @@
 .hobby-container {
     width: 100%;
-    min-height: calc(100vh - var(--navbar-height));
     max-height: fit-content;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     grid-template-areas: 
         "interior-design-img interior-design-description interior-design-description"
         "webcomics-description webcomics-description webcomics-img"
         "modeling-3d-img modeling-3d-description modeling-3d-description"
     ;
-    row-gap: 50%;
+    row-gap: 500px;
 }
 
 .interior-design-img {
     grid-area: interior-design-img;
-    width: 100%;
-    object-fit: contain;
 }
 
 .interior-design-description {
@@ -44,8 +41,23 @@
     grid-area: modeling-3d-description;
 }
 
+.interior-design-img, .webcomics-img,
+.modeling-3d-img {
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.hobby-img {
+    object-fit: cover;
+    height: auto;
+    width: 200%;
+    object-position: -5%;
+}
+
 .interior-design-img, .interior-design-description,
 .webcomics-img, .webcomics-description,
 .modeling-3d-img, .modeling-3d-description {
-    padding: 10%;
+    margin: 5%;
 }
