@@ -45,3 +45,10 @@ sentences per bullet point):
    https://css-tricks.com/using-svg/
 - Using anchor tag for e-mails
    https://www.computerhope.com/issues/ch000056.htm
+- Flexbox guide
+   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Stacking context, regarding transformed elements:
+   - https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate#:~:text=Save%20this%20question.
+   - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+- Technical knowledge layout inspiration
+   - https://josephroche.ie/
