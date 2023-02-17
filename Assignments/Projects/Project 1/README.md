@@ -41,6 +41,25 @@ sentences per bullet point):
    - GitHub: https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg
    - Home Assistant Logo: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/1200px-Home_Assistant_Logo.svg.png
    - LinkedIn Logo: https://www.svgrepo.com/download/108614/linkedin.svg
+   - HTML 5 Logo: By W3C, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=12736763
+   - CSS 3 Logo: By Rudloff - File:CSS3 and HTML5 logos and wordmarks.svg, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=49121103
+   - JavaScript Logo: By Chris Williams - GitHub.com, Public Domain, https://commons.wikimedia.org/w/index.php?curid=20806506
+   - TypeScript Logo: By ™/®Microsoft - Vectorised by Vulphere from https://github.com/microsoft/TypeScript-Website/blob/f407e1ae19e5e990d9901ac8064a32a8cc60edf0/packages/typescriptlang-org/static/branding/ts-logo-512.svg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=92913059
+   - Vue Logo: By Evan You, https://github.com/yyx990803 - https://github.com/vuejs/art/tree/9f8ee218d32b52c2d150212f22798a7a61689361 (transformed to SVG from https://github.com/vuejs/art/blob/9f8ee218d32b52c2d150212f22798a7a61689361/logo.ai), CC BY 4.0, https://commons.wikimedia.org/w/index.php?curid=62557622
+   - Android Logo: By Google Inc., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=8696088
+   - Python Logo: By Dnu72 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=104865676
+   - Java Logo: Fair use, https://sq.wikipedia.org/w/index.php?curid=70723
+   - MySQL Logo: https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png
+   - Firebase Logo: By Google Inc. - https://firebase.google.com/brand-guidelines/, Public Domain, https://commons.wikimedia.org/w/index.php?curid=76112690
+   - AWS Logo: By Amazon.com Inc. - Amazon, Apache License 2.0, https://commons.wikimedia.org/w/index.php?curid=62382835
+   - Unreal Engine Logo: By Jesshider - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=59523884
+   - Git Logo: By Jason Long - http://git-scm.com/downloads/logos, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=19329352
+   - Kubernetes Logo: By Google, Inc. - https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=82568177
+   - Docker Logo: By dotCloud, Inc. - File:Docker (container engine) logo.png, Apache License 2.0, https://commons.wikimedia.org/w/index.php?curid=52332268
+   - Linux Logo: By gg3po, Iwan Gabovitch - Tux Flat SVG, based on File:NewTux.svg by gg3po which is based on File:Tux.png by Larry Ewing, GPL, https://commons.wikimedia.org/w/index.php?curid=48629023
+   - Microsoft Logo: By Microsoft - Windows 11, Public Domain, https://commons.wikimedia.org/w/index.php?curid=106625167
+   - Pytest Logo: By Holger Krekel - https://pypi.org/project/pytest/, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=116199948
+   - JUnit Logo: By Unknown author - https://junit.org/junit4/images/junit5-banner.png, Public Domain, https://commons.wikimedia.org/w/index.php?curid=113407882
 - How to use an svg
    https://css-tricks.com/using-svg/
 - Using anchor tag for e-mails
@@ -51,4 +70,7 @@ sentences per bullet point):
    - https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate#:~:text=Save%20this%20question.
    - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 - Technical knowledge layout inspiration
-   - https://josephroche.ie/
+   https://josephroche.ie/
+- Testing hover states
+   https://stackoverflow.com/questions/4515124/see-hover-state-in-chrome-developer-tools
+

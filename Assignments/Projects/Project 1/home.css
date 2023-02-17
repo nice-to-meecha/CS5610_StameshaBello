@@ -57,6 +57,27 @@
     color: white;
 }
 
+.front-end-tech:hover .tech-img-container,
+.back-end-tech:hover .tech-img-container,
+.libraries-and-frameworks-tech:hover .tech-img-container,
+.tools-and-platforms-tech:hover .tech-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-img-container {
+    width: 75%;
+    display: none;
+    transform: rotate(180deg);
+}
+
+.tech-img-container > img {
+    width: 100px;
+    padding: 10px;
+}
+
 .education-section {
     width: 100%;
     height: calc(100vh - var(--navbar-height));
