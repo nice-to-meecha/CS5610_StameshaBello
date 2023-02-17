@@ -1,9 +1,30 @@
+.circular-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    z-index: -1;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    clip-path: circle(6rem at bottom center);
+    background-color: black;
+    width: 100%;
+    padding-top: 100%;
+}
+
 .contact-table-container {
     width: 100%;
     height: calc(100vh - var(--navbar-height));
     display: flex;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(circle at bottom center, white, white 50%, skyblue 50%);
 }
 
 .contact-table {
@@ -24,6 +45,12 @@
 .link-only-cell {
     border: 5px solid gray;
     border-radius: 5px;
+}
+
+.link-only-cell > a {
+    text-decoration: none;
+    font-size: larger;
+    color: var(--rust-color);
 }
 
 .logo {

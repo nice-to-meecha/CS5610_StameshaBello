@@ -73,4 +73,8 @@ sentences per bullet point):
    https://josephroche.ie/
 - Testing hover states
    https://stackoverflow.com/questions/4515124/see-hover-state-in-chrome-developer-tools
+- Using circles
+   https://cloudfour.com/thinks/css-circles/
+- Radial gradient
+   https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient
 

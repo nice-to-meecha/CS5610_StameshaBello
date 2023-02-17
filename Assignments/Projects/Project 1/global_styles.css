@@ -2,6 +2,7 @@
     --navbar-height: 100px;
     --primary-color: #c2826c;
     --secondary-color: #2a323d;
+    --rust-color: #A95134;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
     width: 100%;
     height: var(--navbar-height);
     background-color: white;
-    color: black;
+    color: var(--secondary-color);
     display: flex;
     justify-content: flex-end;
     justify-items: center;
@@ -28,20 +29,20 @@ body {
 }
 
 .navbar-link {
-    border: 2px solid black;
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     padding: 8px 4px;
     width: 5%;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
     transition: 1s;
     position: relative;
     overflow: hidden;
 }
 
 .navbar-link-current-page {
-    background-color: black;
+    background-color: var(--secondary-color);
     color: white;
 }
 

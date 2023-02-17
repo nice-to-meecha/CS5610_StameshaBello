@@ -10,14 +10,22 @@
         "webcomics-description webcomics-description webcomics-img"
         "modeling-3d-img modeling-3d-description modeling-3d-description"
     ;
+    row-gap: 50%;
 }
 
 .interior-design-img {
     grid-area: interior-design-img;
+    width: 100%;
+    object-fit: contain;
 }
 
 .interior-design-description {
     grid-area: interior-design-description;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+    /* text-align: left; */
 }
 
 .webcomics-img {
@@ -39,5 +47,5 @@
 .interior-design-img, .interior-design-description,
 .webcomics-img, .webcomics-description,
 .modeling-3d-img, .modeling-3d-description {
-    padding: 20%;
+    padding: 10%;
 }

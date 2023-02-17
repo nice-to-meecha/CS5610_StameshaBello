@@ -41,19 +41,24 @@
 .front-end-tech, .back-end-tech,
 .libraries-and-frameworks-tech,
 .tools-and-platforms-tech {
-    padding: 10px;
+    padding: 2%;
     height: 100%;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     font-size: 40px;
+    border-left: 3px solid white;
     transition: 1s;
+}
+
+.tools-and-platforms-tech {
+    border-left: none;
 }
 
 .front-end-tech:hover, .back-end-tech:hover,
 .libraries-and-frameworks-tech:hover,
 .tools-and-platforms-tech:hover {
     flex: 30;
-    background-color: #A95134;
+    background-color: var(--rust-color);
     color: white;
 }
 
@@ -74,7 +79,7 @@
 }
 
 .tech-img-container > img {
-    width: 100px;
+    width: 150px;
     padding: 10px;
 }
 
