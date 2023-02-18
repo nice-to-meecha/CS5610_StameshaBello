@@ -14,6 +14,19 @@
             href="./home.css"
             rel="stylesheet"
         />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        >
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin
+        >
+        <link
+          href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@300&family=Raleway:wght@200&display=swap"
+          rel="stylesheet"
+        >
         <title>Stamesha Bello's Portfolio</title>
     </head>
 
@@ -27,7 +40,7 @@
 
         <div class="navbar">
           <a href="" class="navbar-title">
-            <h2>STA<span class="self-highlight">ME</span>SHA BELLO</h2>
+            STA<span class="self-highlight">ME</span>SHA BELLO
           </a>
           <a href="" class="navbar-link navbar-link-current-page">Home</a>
           <a href="./projects/" class="navbar-link">Projects</a>
@@ -37,12 +50,15 @@
 
         <div class="home-page-greeting">
           <!-- <img src="./resources/peachy_pink.png" class="home-page-greeting-image"/> -->
+          <div class="home-page-greeting-text">
+            I am <span class="greeting-self-highlight">ME</span>.
+          </div>
         </div>
 
         <div class="experience-section">
           <div class="job-description">
-            <h2>Perimetrics</h2>
-            <h6>Full Stack Software Engineer</h6>
+            <h2 class="job-title">Perimetrics</h2>
+            <h4>Full Stack Software Engineer</h4>
             <div class="experience-date">July 2022 - Present</div>
             <ul>
               <li>
@@ -56,9 +72,16 @@
               </li>
             </ul>
           </div>
+          <div class="job-img-container">
+            <img
+              class="job-img"
+              src="./resources/dental.webp"
+              alt="Tooth and dental instrument"
+            />
+          </div>
 
           <div class="job-description">
-            <h2>Robin Healthcare</h2>
+            <h2 class="job-title">Robin Healthcare</h2>
             <h6>Lead Virtual Medical Scribe</h6>
             <div class="experience-date">October 2019 - June 2020</div>
             <ul>
@@ -76,6 +99,13 @@
                 Generated a new client during tenure, writing trial notes for an interested physician
               </li>
             </ul>
+          </div>
+          <div class="job-img-container">
+            <img
+              class="job-img"
+              src="./resources/robin-healthcare.png"
+              alt="Robin Healthcare Logo"
+            />
           </div>
         </div>
 
@@ -191,50 +221,21 @@
           </div>
           <div class="school-list">
             <div class="school">
-              <div>
-                <span>Northeastern University</span>
-                <span>Seattle, WA</span>
-              </div>
-              <div>Khoury College of Computer Science</div>
-              <div>
-                <span>Master of Science in Computer Science</span>
-                <span>September 2020 - December 2023</span>
-              </div>
+              <div class="university-name">Northeastern University</div>
+              <div class="degree">Master of Science in Computer Science</div>
+              <div class="dates-of-attendance">September 2020 - December 2023</div>
             </div>
 
             <div class="school">
-              <div>
-                <span>The University of Texas at Austin</span>
-                <span>Austin, TX</span>
-              </div>
-              <div>College of Natural Sciences</div>
-              <div>
-                <span>Bachelor of Science and Arts in Biology</span>
-                <span>August 2015 - December 2018</span>
-              </div>
+              <div class="university-name">The University of Texas at Austin</div>
+              <div class="degree">Bachelor of Science and Arts in Biology</div>
+              <div class="dates-of-attendance">August 2015 - December 2018</div>
             </div>
           </div>
         </div>
 
         <!--
             Required HTML/CSS Elements
-
-            Navbar
-                A core feature of your site should be a navbar, so that users
-                can easily access all information:
-                    - It should stay in the same position, no matter where the
-                      user has scrolled
-                    - It should contain links to each of the pages above. 
-                      Additionally, when a user is on that page, you should use
-                      styling to indicate that that is where the user is
-                      currently looking.
-                    - It should have a title that references your name
-                    - It should not cover any content, unless the user has
-                      scrolled down the page
-                    - Hint: consider using CSS aspects like transitions and
-                      pseudo-elements (e.g., :hover) to artfully dynamically
-                      modify the size of your navbar
-
             Mobile friendly design
                 Your website should look equally as good when on a mobile phone
                 or desktop computer.  Some considerations:
@@ -248,62 +249,10 @@
                       the side to the bottom of the screen) when the user is in
                       mobile or browser view.
 
-            Use of the certain HTML Components
-                Your website should should use, at least once, each of the
-                following HTML elements:
-                    - div
-                    - span
-                    - a
-                    - img
-                    - p
-                    - head
-                    - body
-                    - h1, h2, h3, h4, h5 or h6
-                    - ul or ol or table
-                Additionally, make sure that your id’s and classes are well named,
-                    as any poorly or carelessly named content may result in a
-                    lower score. 
-                Finally, you should ensure that there is little to no raw HTML on
-                    your page: everything should be styled in some capacity.
-
             Use of certain CSS properties and features
                 You website should use, at least once, each of the following
                 CSS properties or features:
-                    - font-family
-                    - background-color or background
-                    - margin
-                    - padding
-                    - position
-                    - align-items or text-align
-                    - flex
-                    - grid
                     - @media queries
-                    - You must use at least two different pseudo-elements
-                      (e.g., :hover, :first-child, etc.)
-                    - transition/transform
-
-            Good and professional design
-                Finally, it is important that you have a web design that is both
-                easy for users to navigate but also interesting to keep people
-                engaged.  Some considerations:
-                    - Think about how your colors and fonts relate to each other.
-                      It is good if these do not class, but rather make it easy
-                      for users to use your site.
-                    - Consider importing a font for an easy way to make your
-                      website standout.  What font do you find more readable on a
-                      computer screen?
-                    - How are you branding your page?  Consider including pieces
-                      like SVG icons to make your site look more professional
-                    - Imagine how a user would navigate your page
-                    - Experiment with spacing and grid so that your site is well
-                      organized
-                    - You can even consider working out of the box a bit: adding
-                      icons that update when users interact; modify the scroll
-                      bar so it fits with your theme
-                Please know that I understand that this is NOT a design course,
-                but the intention is that you can create something to document
-                your professional experience and share with recruiters,
-                colleagues or others.
         -->
     </body>
 </html>

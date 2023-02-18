@@ -1,3 +1,7 @@
+body {
+    color: white;
+}
+
 .circular-background {
     position: absolute;
     top: 0px;

@@ -21,7 +21,7 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
-   Maybe 12 1/2 or so.
+   25+
 
 ### Resources
 - Contact Page design inspiration:
@@ -37,7 +37,7 @@ sentences per bullet point):
    https://sabe.io/blog/css-set-img-src
 - Hovering dropdown
    https://www.w3schools.com/css/css_dropdowns.asp
-- Icons
+- Visual Media
    - Email: https://www.svgrepo.com/show/137590/email.svg
    - GitHub: https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg
    - Home Assistant Logo: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/1200px-Home_Assistant_Logo.svg.png
@@ -61,6 +61,9 @@ sentences per bullet point):
    - Microsoft Logo: By Microsoft - Windows 11, Public Domain, https://commons.wikimedia.org/w/index.php?curid=106625167
    - Pytest Logo: By Holger Krekel - https://pypi.org/project/pytest/, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=116199948
    - JUnit Logo: By Unknown author - https://junit.org/junit4/images/junit5-banner.png, Public Domain, https://commons.wikimedia.org/w/index.php?curid=113407882
+   - Dental Image: https://gp-assets-1.growthplug.com/website_files/4483/dental.jpg
+   - Robin Healthcare Logo: https://assets.website-files.com/62e1e5d298156e5394c23a57/637ba03b291e7c9d71a43d01_About%20Us.png
+   - Black Brush Stroke: https://www.onlygfx.com/wp-content/uploads/2017/06/dry-brush-stroke-2-1024x384.png
 - How to use an svg
    https://css-tricks.com/using-svg/
 - Using anchor tag for e-mails
@@ -80,4 +83,6 @@ sentences per bullet point):
    https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient
 - Square layout with grid
    https://stackoverflow.com/questions/54927180/css-grid-square-layout
+- Background shorthand
+   https://www.w3schools.com/css/css_background_shorthand.asp
 

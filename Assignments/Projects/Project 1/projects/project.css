@@ -1,8 +1,4 @@
 body {
-    --project1-height: 1fr;
-    --project2-height: 1fr;
-    --project3-height: 1fr;
-    --project4-height: 1fr;
     --content-display: none;
     --project-title-font-size: 55px;
 }
@@ -10,20 +6,12 @@ body {
 .project-grid {
     width: 100%;
     height: calc(100vh - var(--navbar-height));
-    /* max-height: fit-content; */
     background-color: var(--primary-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-        /* var(--project1-height)
-        var(--project2-height)
-        var(--project3-height)
-        var(--project4-height); */
     grid-template-areas:
         "selected-project-img projects";
-        /* "selected-project-img project2"
-        "selected-project-img project3"
-        "selected-project-img project4"; */
     color: white;
 }
 
@@ -42,7 +30,6 @@ body {
     flex-grow: 1;
     flex-shrink: 1;
     transition: 1s;
-    position: relative;
 }
 
 .project:first-child {
@@ -57,26 +44,9 @@ body {
 .project-title {
     font-size: 55px;
     font-weight: bold;
-    transition: 1s;
+    transition: 0.5s;
     /* margin: 0px; */
 }
-
-/* .project1 {
-    grid-area: project1;
-    border-top: none;
-}
-
-.project2 {
-    grid-area: project2;
-}
-
-.project3 {
-    grid-area: project3;
-}
-
-.project4 {
-    grid-area: project4;
-} */
 
 .project-container {
     background-color: var(--primary-color);
@@ -92,10 +62,9 @@ body {
     overflow-y: auto;
 }
 
-/* ul {
-    transition: 1s;
-    display: var(--content-display);
-} */
+.project:hover .project-title {
+    color: rgb(255, 255, 255, 0);
+}
 
 .project:hover .popup {
     display: block;
@@ -104,17 +73,21 @@ body {
 .popup {
     position: absolute;
     right: 5%;
-    top: 0px;
+    top: 5%;
     z-index: 1;
     width: 30%;
+    height: 40vh;
     display: none;
+    transition: display 0.5s;
 }
 
 .img-container {
     width: 100%;
+    height: auto;
 }
 
 .popup-img {
-    object-fit: contain;
+    /* object-fit: contain; */
     width: 100%;
+    height: auto;
 }

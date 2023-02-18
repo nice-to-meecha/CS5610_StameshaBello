@@ -1,15 +1,13 @@
 .home-page-greeting {
     width: 100%;
     height: 100vh;
-    background-color: var(--primary-color);
     color: white;
-    /* background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 40px ), repeating-linear-gradient( #444cf755, #444cf7 ); */
-    /* background-image: radial-gradient( ellipse farthest-corner at 40px 40px , #444cf7, #444cf7 50%, #e5e5f7 50%);
-    background-size: 40px 40px; */
-    /* margin-bottom: 100px; */
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--primary-color) url("./resources/black-brush-stroke.png") no-repeat right bottom;
 }
 
 .home-page-greeting-image {
@@ -18,15 +16,53 @@
     object-fit: contain;
     flex-shrink: 1;
     flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.greeting-self-highlight {
+    font-family: 'Monoton', cursive;
+}
+
+.home-page-greeting-text {
+    width: 50%;
+    font-size: 300px;
+    text-align: right;
 }
 
 .experience-section {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
+    height: auto;
     background-color: var(--secondary-color);
     color: white;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.job-img-container {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-img {
+    width: 100%;
+    height: auto;
+}
+
+.job-description {
+    width: 48%;
+    height: 50%;
+    padding-left: 2%;
+}
+
+.job-title {
+    font-size: 30px;
 }
 
 .technical-knowledge {
@@ -48,6 +84,7 @@
     font-size: 40px;
     border-left: 3px solid white;
     transition: 1s;
+    font-weight: 550;
 }
 
 .tools-and-platforms-tech {
@@ -84,17 +121,53 @@
 }
 
 .education-section {
-    width: 100%;
-    height: calc(100vh - var(--navbar-height));
-    padding-top: var(--navbar-height);
     display: flex;
-    font-size: xx-large;
     background-color: var(--secondary-color);
+    width: 100%;
+    height: 100vh;
+    max-height: fit-content;
     color: white;
+}
+
+.education-img {
+    width: 40%;
+    height: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
 }
 
 .UT-tower {
-    height: calc(100vh - var(--navbar-height));
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.school-list {
+    width: 50%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0%;
+}
+
+.school {
+    width: 90%;
+    height: 40%;
+    padding: 5%;
+}
+
+.university-name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.degree {
+    font-size: 25px;
+    font-style: italic;
+}
+
+.dates-of-attendance {
+    font-size: 20px;
 }
