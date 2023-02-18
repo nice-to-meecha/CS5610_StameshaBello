@@ -8,6 +8,7 @@
     margin-right: 10px;
     font-family: 'Times New Roman', Times, serif;
     background: var(--primary-color) url("./resources/black-brush-stroke.png") no-repeat right bottom;
+    background-size: contain;
 }
 
 .home-page-greeting-image {
@@ -26,7 +27,7 @@
 
 .home-page-greeting-text {
     width: 50%;
-    font-size: 300px;
+    font-size: var(--greeting-font-size);
     text-align: right;
 }
 
@@ -146,10 +147,10 @@
 
 .school-list {
     width: 50%;
-    height: 85%;
+    height: 75%;
     display: flex;
     flex-direction: column;
-    padding: 5% 0%;
+    padding: 1% 0%;
 }
 
 .school {
@@ -170,4 +171,51 @@
 
 .dates-of-attendance {
     font-size: 20px;
+}
+
+
+/* @media Queries */
+
+/*  Extra Small (ipod, etc.) */
+@media (min-width: 0px) {
+    .home-page-greeting-text {
+        --greeting-font-size: 30vw;
+        text-align: center;
+    }
+
+    .home-page-greeting {
+        justify-content: center;
+    }
+}
+
+/* Small (cell phone) */
+@media (min-width: 576px) {
+    .home-page-greeting-text {
+        --greeting-font-size: 25vw;
+    }
+
+    .home-page-greeting {
+        justify-content: flex-end;
+    }
+}
+
+/* Medium (tablet) */
+@media (min-width: 768px) {
+    .home-page-greeting-text {
+        --greeting-font-size: 25vw;
+    }
+}
+
+/* Large (computer) */
+@media (min-width: 992px) {
+    .home-page-greeting-text {
+        --greeting-font-size: 25vw;
+    }
+}
+
+/* Extra Large (large computer screen) */
+@media (min-width: 1200px) {
+    .home-page-greeting-text {
+        --greeting-font-size: 20vw;
+    }
 }

@@ -21,7 +21,7 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
-   25+
+   30+
 
 ### Resources
 - Contact Page design inspiration:
@@ -64,6 +64,7 @@ sentences per bullet point):
    - Dental Image: https://gp-assets-1.growthplug.com/website_files/4483/dental.jpg
    - Robin Healthcare Logo: https://assets.website-files.com/62e1e5d298156e5394c23a57/637ba03b291e7c9d71a43d01_About%20Us.png
    - Black Brush Stroke: https://www.onlygfx.com/wp-content/uploads/2017/06/dry-brush-stroke-2-1024x384.png
+   - To-Do List: https://miro.medium.com/max/1200/1*oyzl9-P13xwow7zZXAeoqA.jpeg
 - How to use an svg
    https://css-tricks.com/using-svg/
 - Using anchor tag for e-mails
