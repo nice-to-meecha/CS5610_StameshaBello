@@ -5,20 +5,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 10px;
     font-family: 'Times New Roman', Times, serif;
     background: var(--primary-color) url("./resources/black-brush-stroke.png") no-repeat right bottom;
     background-size: contain;
-}
-
-.home-page-greeting-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    flex-shrink: 1;
-    flex-grow: 1;
-    position: relative;
-    z-index: 1;
+    background-position-y: 95%;
 }
 
 .greeting-self-highlight {
@@ -33,7 +23,6 @@
 
 .experience-section {
     width: 100%;
-    height: 150vh;
     height: auto;
     background-color: var(--secondary-color);
     color: white;
@@ -43,8 +32,6 @@
 }
 
 .job-img-container {
-    width: 50%;
-    height: 50%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -54,12 +41,6 @@
 .job-img {
     width: 100%;
     height: auto;
-}
-
-.job-description {
-    width: 48%;
-    height: 50%;
-    padding-left: 2%;
 }
 
 .job-title {
@@ -82,10 +63,8 @@
     height: 100%;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    font-size: 40px;
     border-left: 3px solid white;
     transition: 1s;
-    font-weight: 550;
 }
 
 .tools-and-platforms-tech {
@@ -116,23 +95,16 @@
     transform: rotate(180deg);
 }
 
-.tech-img-container > img {
-    width: 150px;
-    padding: 10px;
-}
-
 .education-section {
     display: flex;
     background-color: var(--secondary-color);
     width: 100%;
-    height: 100vh;
     max-height: fit-content;
     color: white;
+    flex-wrap: wrap;
 }
 
 .education-img {
-    width: 40%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,14 +112,12 @@
 
 .UT-tower {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: 100%;
     object-fit: cover;
 }
 
 .school-list {
-    width: 50%;
-    height: 75%;
     display: flex;
     flex-direction: column;
     padding: 1% 0%;
@@ -160,17 +130,11 @@
 }
 
 .university-name {
-    font-size: 35px;
     font-weight: bold;
 }
 
 .degree {
-    font-size: 25px;
     font-style: italic;
-}
-
-.dates-of-attendance {
-    font-size: 20px;
 }
 
 
@@ -185,6 +149,55 @@
 
     .home-page-greeting {
         justify-content: center;
+        margin: 0px;
+        background-position-y: 75%;
+    }
+
+    .job-description {
+        width: 96%;
+        height: 25%;
+        padding: 0% 2%;
+    }
+
+    .job-img-container {
+        width: 100%;
+        height: 25%;
+    }
+
+    .tech-img-container > img {
+        width: 20vw;
+        padding: 10px;
+    }
+
+    .technical-knowledge {
+        font-size: 5vw;
+        font-weight: 600;
+    }
+
+    .education-section {
+        height: 200vh;
+    }
+
+    .education-img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .school-list {
+        width: 100%;
+        height: 50%;
+    }
+
+    .university-name {
+        font-size: 5vw;
+    }
+
+    .degree {
+        font-size: 4vw;
+    }
+    
+    .dates-of-attendance {
+        font-size: 3.25vw;
     }
 }
 
@@ -196,13 +209,74 @@
 
     .home-page-greeting {
         justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .technical-knowledge {
+        font-weight: 550;
+    }
+
+    .education-section {
+        height: 100vh;
+    }
+
+    .education-img {
+        width: 40%;
+        height: 100%;
+    }
+
+    .school-list {
+        width: 60%;
+        height: 90%
+    }
+
+    .university-name {
+        font-size: 4vw;
+    }
+
+    .degree {
+        font-size: 3.5vw;
+    }
+
+    .dates-of-attendance {
+        font-size: 2.875vw;
     }
 }
 
 /* Medium (tablet) */
 @media (min-width: 768px) {
+    .home-page-greeting {
+        background-position-y: 95%;
+    }
+
     .home-page-greeting-text {
         --greeting-font-size: 25vw;
+    }
+
+    .job-description {
+        width: 46%;
+        height: 50%;
+    }
+
+    .job-img-container {
+        width: 50%;
+        height: 50%;
+    }
+
+    .tech-img-container > img {
+        width: 15vw;
+    }
+
+    .technical-knowledge {
+        font-size: 3.85vw;
+    }
+
+    .degree {
+        font-size: 3vw;
+    }
+
+    .dates-of-attendance {
+        font-size: 2.5vw;
     }
 }
 
@@ -211,11 +285,39 @@
     .home-page-greeting-text {
         --greeting-font-size: 25vw;
     }
+
+    .degree {
+        font-size: 2.5vw;
+    }
+
+    .dates-of-attendance {
+        font-size: 2.125vw;
+    }
 }
 
 /* Extra Large (large computer screen) */
 @media (min-width: 1200px) {
     .home-page-greeting-text {
         --greeting-font-size: 20vw;
+    }
+
+    .tech-img-container > img {
+        width: 12vw;
+    }
+
+    .technical-knowledge {
+        font-size: 3.5vw;
+    }
+
+    .university-name {
+        font-size: 3.5vw;
+    }
+
+    .degree {
+        font-size: 2vw;
+    }
+    
+    .dates-of-attendance {
+        font-size: 1.75vw;
     }
 }

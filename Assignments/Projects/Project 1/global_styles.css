@@ -1,5 +1,4 @@
 :root {
-    --navbar-height: 100px;
     --primary-color: #c2826c;
     --secondary-color: #2a323d;
     --rust-color: #A95134;
@@ -19,19 +18,16 @@ body {
     background-color: white;
     color: var(--secondary-color);
     display: flex;
-    justify-content: flex-end;
     justify-items: center;
     align-content: center;
     align-items: center;
-    gap: 1%;
     z-index: 2;
 }
 
 .navbar-link {
     border: 2px solid var(--secondary-color);
     border-radius: 5px;
-    padding: 8px 4px;
-    width: 5%;
+    width: auto;
     text-align: center;
     text-decoration: none;
     color: var(--secondary-color);
@@ -77,11 +73,10 @@ body {
     text-decoration: none;
     color: black;
     font-family: 'Monoton', cursive;
-    font-size: 36px;
 }
 
 .self-highlight {
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 
 .navbar-title:hover .self-highlight {
@@ -93,7 +88,7 @@ body {
 /*  Extra Small (ipod, etc.) */
 @media (min-width: 0px) {
     :root {
-        /* --navbar-height: 50px; */
+        --navbar-height: 75px;
     }
 
     body {
@@ -103,11 +98,26 @@ body {
     .navbar {
         top: auto;
         bottom: 0px;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .navbar-title {
+        font-size: 0vw;
+    }
+
+    .navbar-link {
+        font-size: 5vw;
+        padding: 1vw 0.75vw;
     }
 }
 
 /* Small (cell phone) */
 @media (min-width: 576px) {
+    :root {
+        --navbar-height: 100px;
+    }
+
     body {
         margin: var(--navbar-height) 0px 0px 0px;
     }
@@ -115,20 +125,50 @@ body {
     .navbar {
         top: 0px;
         bottom: auto;
+        justify-content: flex-end;
+        gap: 1%;
+    }
+
+    .navbar-title {
+        font-size: 5vw;
+    }
+
+    .navbar-link {
+        font-size: 2.25vw;
+        padding: 0.5vw 0.35vw;
     }
 }
 
 /* Medium (tablet) */
 @media (min-width: 768px) {
+    .navbar-title {
+        font-size: 4vw;
+    }
 
+    .navbar-link {
+        font-size: 2vw;
+    }
 }
 
 /* Large (computer) */
 @media (min-width: 992px) {
+    .navbar-title {
+        font-size: 3vw;
+        display: hidden;
+    }
 
+    .navbar-link {
+        font-size: 1.75vw;
+    }
 }
 
 /* Extra Large (large computer screen) */
 @media (min-width: 1200px) {
+    .navbar-title {
+        font-size: 2.5vw;
+    }
 
+    .navbar-link {
+        font-size: 1.5vw;
+    }
 }

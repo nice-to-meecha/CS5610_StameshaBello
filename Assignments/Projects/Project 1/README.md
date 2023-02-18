@@ -21,10 +21,10 @@ sentences per bullet point):
    to your site in the future? 
 
 5. How many hours did you spend on this assignment?
-   30+
+   30-35
 
 ### Resources
-- Contact Page design inspiration:
+- Original contact page design inspiration:
    https://images01.nicepagecdn.com/page/64/21/website-design-preview-64211.jpg
 - Made preliminary site design with LucidChart
    https://lucid.app/lucidchart/d19480fc-243d-41e9-a869-cfbf1e95b05c/edit?beaconFlowId=A27443F4FAE8D6AA&invitationId=inv_fa33e67d-15fd-441e-ac15-a9098ad52506&page=0_0#
@@ -86,4 +86,6 @@ sentences per bullet point):
    https://stackoverflow.com/questions/54927180/css-grid-square-layout
 - Background shorthand
    https://www.w3schools.com/css/css_background_shorthand.asp
+- Explaining issues with mobile viewport scale
+   https://stackoverflow.com/questions/43308740/viewport-meta-tag-not-working-as-expected-on-android
 
