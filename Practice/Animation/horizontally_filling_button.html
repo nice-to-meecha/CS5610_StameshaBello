@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+        Name: Stamesha Bello
+        Date: 2-9-2023
+
+        Following this tutorial:
+            https://blog.logrocket.com/css-before-after-custom-animations-transitions/#creating-animated-button-pseudo-elements
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+        <title>Horizontally Filling Button</title>
+        <style>
+            .button-container {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .button {
+                color: purple;
+                border: 2px solid purple;
+                border-radius: 25px; /* Rounds out borders by radius of 25px */
+                padding: 10px 20px; /* Adds 10px padding to top, bottom; 20px padding to left, right*/
+                text-decoration: none; /* Removes underline from hyperlink */
+                transition: 1s; /* Applies state changes to all properties (default is all) in 1 second */
+                position: relative; /* In preparation for pseudo-element */
+                overflow: hidden; /* Hides any element that overflows from container*/
+            }
+
+            .button::before {
+                background-color: purple;
+                width: 100%; /* Fills entire button */
+                height: 100%;
+                position: absolute; /* Makes content overlap with button*/
+                top: 0%;
+                left: 0%;
+                content: ""; /* Needed to show pseudo-element*/
+                transition: 1s;
+                transform: translateX(-100%); /* Moves block back, so that end is where button begins*/
+                z-index: -1; /* Moves "before" content behind button */
+            }
+
+            .button:hover::before {
+                transform: translateX(0);
+            }
+
+            .button:hover {
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="button-container">
+            <a href="#" class="button">Hover Over Me</a>
+        </div>
+    </body>
+</html>
