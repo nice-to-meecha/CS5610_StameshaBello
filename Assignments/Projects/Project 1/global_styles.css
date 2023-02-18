@@ -26,7 +26,7 @@ body {
     align-content: center;
     align-items: center;
     gap: 1%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar-link {

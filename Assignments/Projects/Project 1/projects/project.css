@@ -73,21 +73,33 @@ body {
 .popup {
     position: absolute;
     right: 5%;
-    top: 5%;
+    top: calc(var(--navbar-height) + 10px);
     z-index: 1;
-    width: 30%;
-    height: 40vh;
+    width: 25%;
+    height: fit-content;
     display: none;
     transition: display 0.5s;
 }
 
+.project2 .popup {
+    top: 30%;
+}
+
+.project4 .popup {
+    top: 30%;
+}
+
+.popup > ul {
+    background-color: var(--primary-color);
+}
+
 .img-container {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .popup-img {
-    /* object-fit: contain; */
+    object-fit: contain;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
