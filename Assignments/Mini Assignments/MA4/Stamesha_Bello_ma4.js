@@ -13,14 +13,14 @@ const student_name = "Stamesha Bello"
 
 */
 function findBiggestNumber(map) {
-    let biggestNum;
-    map.flat().forEach(num => {
-      if (!isNaN(num) && num > (biggestNum ?? -Infinity)) {
-        biggestNum = num;
-      }
-    })
+  let biggestNum;
+  map.flat().forEach(num => {
+    if (!isNaN(num) && num > (biggestNum ?? -Infinity)) {
+      biggestNum = num;
+    }
+  });
 
-    return biggestNum;
+  return biggestNum;
 }
 
 // PROBLEM 2 - balancedString
@@ -40,9 +40,17 @@ function findBiggestNumber(map) {
 */
 
 function balancedString(str) {
-    /*
-        Insert code here!
-    */
+  const letterCount = {};
+  for (let i = 0; i < str.length; i++) {
+    const letter = str[i];
+    if (letterCount[letter]) {
+      letterCount[letter] += 1;
+    } else {
+      letterCount[letter] = 1;
+    }
+  }
+
+  return new Set(Object.values(letterCount)).size <= 1;
 }
 
 // PROBLEM 3 - additivePersistence
