@@ -67,9 +67,22 @@ function balancedString(str) {
     an integer as described above
 */
 function additivePersistence(num) {
-    /*
-        Insert code here!
-    */
+  function digitSum(digits) {
+    if (!Math.trunc(digits / 10)) {
+      return digits;
+    }
+    
+    return (digits % 10) + digitSum(Math.trunc(digits / 10));
+  }
+
+  let numLoops = 0;
+  let currSum = num;
+  while (Math.trunc(currSum / 10)) {
+    currSum = digitSum(currSum);
+    numLoops += 1;
+  }
+
+  return numLoops;
 }
 
 
