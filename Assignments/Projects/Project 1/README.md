@@ -11,17 +11,45 @@ sentences per bullet point):
    I spent a decent amount of time trying to figure out how to resize
    grid rows, upon hovering its child elements, only to realize that
    I would be better served by utilizing a flex column instead.
+   
+   I found it especially challenging to work with CSS. I encountered
+   so many problems with positioning and resizing items, that I ended
+   up turning this in an entire 3 days late. I stopped counting the
+   hours after a while, but I would say that I likely spent anywhere in
+   between 34 and 40 hours on this website. Unfortunately, it only
+   looks like a spent a few minutes on it.
 
 2. What decisions did you make when you made your site mobile friendly?
+
+   I changes the font and image sizes with @media queries. Apart from
+   that, I also ensured that most of them (I'm sure I missed some) were
+   using percentage or view-width sizes, so that they would adjust with
+   the picture size. I also changed the layout of the grid on the Hobbies
+   page, as well as the Experience and Education sections on the Home page,
+   in order to account for long, mobile screens.
 
 3. What did you take into account when you developed the *design* of your
    website?  Is there anything that you’re particularly proud of?
 
+   I took into account the layout of current, modern sites and tried
+   incorporating some of those designs into my own site. I'm not
+   particularly proud of anything. This portfolio is honestly horrible, but
+   I guess the vertical Technical Knowledge section might be the most visually
+   interesting. I don't know.
+
 4. Given more time or resources, what additional features would you add
    to your site in the future? 
 
+   I would've added more animations, since this website is currently pretty
+   boring. I also would've resized the contact table, so that it would actually
+   be more mobile friendly, as it currently is not. I also would have added
+   some JavaScript, so that I could enable animations upon scrolling, since
+   those are pretty popular these days (I think).
+
 5. How many hours did you spend on this assignment?
-   30-35
+   I would say it took approximately 34-40 hours to complete this assignment.
+   I'm not sure of how else to say this, such that it would take at least 3 sentences.
+   I am so tired.
 
 ### Resources
 - Original contact page design inspiration:
