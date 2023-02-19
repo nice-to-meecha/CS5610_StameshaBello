@@ -42,7 +42,8 @@ body {
 }
 
 .project-title {
-    font-size: 55px;
+    font-size: 3.5vw;
+    /* font-size: 55px; */
     font-weight: bold;
     transition: 0.5s;
     /* margin: 0px; */
@@ -63,7 +64,11 @@ body {
 }
 
 .project:hover .project-title {
-    color: rgb(255, 255, 255, 0);
+    /* color: rgb(255, 255, 255, 0); */
+}
+
+.project:hover {
+    background-color: var(--rust-color);
 }
 
 .project:hover .popup {
@@ -72,34 +77,77 @@ body {
 
 .popup {
     position: absolute;
-    right: 5%;
     top: calc(var(--navbar-height) + 10px);
     z-index: 1;
-    width: 25%;
-    height: fit-content;
+    height: 80%;
     display: none;
     transition: display 0.5s;
 }
 
-.project2 .popup {
-    top: 30%;
-}
-
-.project4 .popup {
-    top: 30%;
-}
-
 .popup > ul {
-    background-color: var(--primary-color);
+    background-color: var(--rust-color);
 }
 
 .img-container {
     width: 100%;
-    height: 100%;
+    height: 50%;
 }
 
 .popup-img {
     object-fit: contain;
     width: 100%;
     height: 100%;
+}
+
+/* @media Queries */
+
+/*  Extra Small (ipod, etc.) */
+@media (min-width: 0px) {
+    .popup {
+        right: 10%;
+        width: 80%;
+        top: auto;
+        bottom: calc(var(--navbar-height) + 10px);
+    }
+
+    .project-title {
+        font-size: 8vw;
+    }
+}
+
+@media (min-width: 576px) {
+    .project-title {
+        font-size: 5vw;
+    }
+
+    .popup {
+        top: calc(var(--navbar-height) + 1%);
+        bottom: auto;
+    }
+}
+
+/* Medium (tablet) */
+@media (min-width: 768px) {
+    .popup {
+        right: 5%;
+        width: 40%;
+    }
+
+    .project2 .popup {
+        top: 30%;
+    }
+    
+    .project4 .popup {
+        top: 30%;
+    }
+
+    .project-title {
+        font-size: 4.5vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .project-title {
+        font-size: 3.5vw;
+    }
 }
