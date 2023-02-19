@@ -66,3 +66,32 @@ h4 {
 .modeling-3d-img, .modeling-3d-description {
     margin: 5%;
 }
+
+@media (min-width: 0px) {
+    .hobby-container {
+        grid-template-areas: 
+            "interior-design-img "
+            "interior-design-description"
+            "webcomics-img"
+            "webcomics-description"
+            "modeling-3d-img"
+            "modeling-3d-description"
+        ;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: repeat(6, minmax(0, 1fr));
+        row-gap: 2%;
+    }
+}
+
+@media (min-width: 576px) {
+    .hobby-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-areas: 
+            "interior-design-img interior-design-description interior-design-description"
+            "webcomics-description webcomics-description webcomics-img"
+            "modeling-3d-img modeling-3d-description modeling-3d-description"
+        ;
+        row-gap: 500px;
+    }
+}

@@ -29,12 +29,16 @@ body {
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle at bottom center, white, white 50%, skyblue 50%);
+    flex-wrap: wrap;
+    overflow-x: auto;
 }
 
 .contact-table {
     width: 50%;
+    min-width: 500px;
     /* border-collapse: collapse; */
     border-spacing: 1em;
+    flex-shrink: 1;
 }
 
 .contact-table td {
@@ -53,10 +57,27 @@ body {
 
 .link-only-cell > a {
     text-decoration: none;
-    font-size: larger;
+    font-size: 2vw;
     color: var(--rust-color);
 }
 
 .logo {
     width: 100%;
 }
+
+/* @media (min-width: 0px) {
+    .link-only-cell > a {
+        text-decoration: none;
+        font-size: 2vw;
+        color: var(--rust-color);
+    }
+
+    .contact-table {
+        transform: rotate(90deg);
+        writing-mode: vertical-lr;
+    }
+
+    .logo {
+        transform: rotate(-90deg);
+    }
+} */
