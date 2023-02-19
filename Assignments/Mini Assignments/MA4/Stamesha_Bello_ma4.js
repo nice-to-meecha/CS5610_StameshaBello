@@ -14,12 +14,13 @@ const student_name = "Stamesha Bello"
 */
 function findBiggestNumber(map) {
   let biggestNum;
-  map.flat().forEach(num => {
+  function findMax(num) {
     if (!isNaN(num) && num > (biggestNum ?? -Infinity)) {
       biggestNum = num;
     }
-  });
+  }
 
+  map.flat().forEach(findMax);
   return biggestNum;
 }
 
