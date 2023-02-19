@@ -13,9 +13,14 @@ const student_name = "Stamesha Bello"
 
 */
 function findBiggestNumber(map) {
-    /*
-        Insert code here!
-    */
+    let biggestNum;
+    map.flat().forEach(num => {
+      if (!isNaN(num) && num > (biggestNum ?? -Infinity)) {
+        biggestNum = num;
+      }
+    })
+
+    return biggestNum;
 }
 
 // PROBLEM 2 - balancedString
