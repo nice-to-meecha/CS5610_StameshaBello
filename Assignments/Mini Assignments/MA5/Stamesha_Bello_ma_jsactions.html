@@ -1,3 +1,9 @@
+<!--
+    Name: Stamesha Bello
+    Date: 2/23/2023
+    MA5: JavaScript Actions
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,68 +27,56 @@
                 margin: 1%;
             }
 
-            #color-input {
-
-            }
-
-            #change-color-button {
-
+            #invalid-input {
+                display: none;
+                color: red;
             }
 
         </style>
     </head>
 
     <body>
-        <!--
-            Task 2: Change Square Color
-                Within this HTML file, you will now add some JavaScript via a script tag.
-
-                Users of this app will be able to change the color of this square by inserting
-                one of three colors: “green”, “blue” and “red”.  Note that we will only be
-                testing lower case spellings of these words, but you can choose to make them
-                case insensitive if you please.
-
-                When a user presses on the button, the square’s background color should change to the appropriate color.  
-
-            Task 3: Handle Errors
-                If a user types in a word that is NOT in the list, then the square should
-                revert to a white background.  Additionally, an error in red should appear
-                below the input button that indicates the color is not valid and to tell
-                the user the valid colors.  For instance, if I were to type “banana” into
-                the input bar and click “Change color”, then the square should turn white
-                (if it isn’t already) and then the message “banana is not a valid color.
-                Please choose green, blue or red.”
-
-            Task 4: Good JS Practices
-                As before, you should strive to write clear and understandable JavaScript
-                code.  Avoid leaving in console.logs and alerts, and ensure that your code
-                won’t break if a user puts in an invalid string.
-        -->
         <div id="color-square"></div>
         <input id="color-input" />
-        <button id="change-color-button" >Change color</button>
+        <button id="change-color-button">Change color</button>
+        <div id="invalid-input"></div>
 
         <script>
 
             const colorSquare = document.getElementById("color-square");
+            const colorInput = document.getElementById("color-input");
             const changeColorButton = document.getElementById("change-color-button");
-            changeColorButton.addEventListener("click", function(event) {
-                const inputColor = event.target.value;
+            const invalidInput = document.getElementById("invalid-input");
+
+            changeColorButton.addEventListener("click", function() {
+                const inputColor = colorInput.value;
+                let squareColor, invalidDisplay;
+
                 switch(inputColor.toLowerCase()) {
                     case "red":
-                        colorSquare.setAttribute("background-color", "red");
+                        squareColor = "red";
+                        invalidDisplay = "none";
                         break;
 
                     case "green":
-                        colorSquare.setAttribute("background-color", "green");
+                        squareColor = "green";
+                        invalidDisplay = "none";
                         break;
+
                     case "blue":
-                        colorSquare.setAttribute("background-color", "blue");
+                        squareColor = "blue";
+                        invalidDisplay = "none";
                         break;
 
                     default:
-                        console.log("Invalid input!");
+                        squareColor = "white";
+                        invalidDisplay = "block";
+                        invalidInput.textContent = `${inputColor} is not a valid color. 
+                            Please choose green, blue, or red.`;
                 }
+
+                colorSquare.style.backgroundColor = squareColor;
+                invalidInput.style.display = invalidDisplay;
             })
 
         </script>
