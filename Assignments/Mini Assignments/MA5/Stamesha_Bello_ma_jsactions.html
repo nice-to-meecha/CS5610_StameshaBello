@@ -2,6 +2,10 @@
     Name: Stamesha Bello
     Date: 2/23/2023
     MA5: JavaScript Actions
+
+    Resources:
+        - Recommended HTML line max length
+            https://stackoverflow.com/questions/2886603/is-there-a-recommended-maximum-line-length-for-html-or-javascript
 -->
 
 <!DOCTYPE html>
@@ -45,34 +49,28 @@
 
             const colorSquare = document.getElementById("color-square");
             const colorInput = document.getElementById("color-input");
-            const changeColorButton = document.getElementById("change-color-button");
+            const changeColorButton = document.getElementById(
+                "change-color-button"
+            );
             const invalidInput = document.getElementById("invalid-input");
 
             changeColorButton.addEventListener("click", function() {
-                const inputColor = colorInput.value;
+                const inputColor = colorInput.value.toLowerCase();
                 let squareColor, invalidDisplay;
 
-                switch(inputColor.toLowerCase()) {
+                switch(inputColor) {
                     case "red":
-                        squareColor = "red";
-                        invalidDisplay = "none";
-                        break;
-
                     case "green":
-                        squareColor = "green";
-                        invalidDisplay = "none";
-                        break;
-
                     case "blue":
-                        squareColor = "blue";
+                        squareColor = inputColor;
                         invalidDisplay = "none";
                         break;
 
                     default:
                         squareColor = "white";
                         invalidDisplay = "block";
-                        invalidInput.textContent = `${inputColor} is not a valid color. 
-                            Please choose green, blue, or red.`;
+                        invalidInput.textContent = `${colorInput.value} is not
+                            a valid color. Please choose green, blue, or red.`;
                 }
 
                 colorSquare.style.backgroundColor = squareColor;
