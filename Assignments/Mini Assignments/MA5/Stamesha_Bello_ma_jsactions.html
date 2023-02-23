@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <title>MA5: JS Events</title>
+        <style>
+
+            :root {
+                --square-sides: 100px;
+            }
+
+            #color-square {
+                width: var(--square-sides);
+                height: var(--square-sides);
+                background-color: white;
+                border: 1px solid black;
+                margin: 1%;
+            }
+
+            #color-input {
+
+            }
+
+            #change-color-button {
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--
+            Task 2: Change Square Color
+                Within this HTML file, you will now add some JavaScript via a script tag.
+
+                Users of this app will be able to change the color of this square by inserting
+                one of three colors: “green”, “blue” and “red”.  Note that we will only be
+                testing lower case spellings of these words, but you can choose to make them
+                case insensitive if you please.
+
+                When a user presses on the button, the square’s background color should change to the appropriate color.  
+
+            Task 3: Handle Errors
+                If a user types in a word that is NOT in the list, then the square should
+                revert to a white background.  Additionally, an error in red should appear
+                below the input button that indicates the color is not valid and to tell
+                the user the valid colors.  For instance, if I were to type “banana” into
+                the input bar and click “Change color”, then the square should turn white
+                (if it isn’t already) and then the message “banana is not a valid color.
+                Please choose green, blue or red.”
+
+            Task 4: Good JS Practices
+                As before, you should strive to write clear and understandable JavaScript
+                code.  Avoid leaving in console.logs and alerts, and ensure that your code
+                won’t break if a user puts in an invalid string.
+        -->
+        <div id="color-square"></div>
+        <input id="color-input" />
+        <button id="change-color-button" >Change color</button>
+
+        <script>
+
+            const colorSquare = document.getElementById("color-square");
+            const changeColorButton = document.getElementById("change-color-button");
+            changeColorButton.addEventListener("click", function(event) {
+                const inputColor = event.target.value;
+                switch(inputColor.toLowerCase()) {
+                    case "red":
+                        colorSquare.setAttribute("background-color", "red");
+                        break;
+
+                    case "green":
+                        colorSquare.setAttribute("background-color", "green");
+                        break;
+                    case "blue":
+                        colorSquare.setAttribute("background-color", "blue");
+                        break;
+
+                    default:
+                        console.log("Invalid input!");
+                }
+            })
+
+        </script>
+    </body>
+</html>

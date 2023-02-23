@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <title>Lecture 6 - DOM</title>
+    </head>
+
+    <body>
+        <div id="Hello">Hello, I'm a div</div>
+        
+        <button id="roll-dice">Roll Dice</button>
+        <div id="answer"></div>
+
+        <div>Input Number Here!</div>
+        <input id="random-number-input"/>
+        <div id="warning"></div>
+
+        <script>
+            /*
+                DOM - Document Object Model
+                    - Allows us to programmatically interact with elements on the page
+            */
+            const helloDiv = document.getElementById("Hello");
+            helloDiv.textContent = "Goodbye, I'm not a div anymore.";
+
+            /*
+                DOM Tree - Starts with a root node; each node (element) has children.
+                    - Document structure changes representation of document to a tree structure
+                    - Nested elements are children to their parents (outer elements)
+                    
+                DOM Document
+                    - When you type "document" in JS, refers to the document on the browser.
+                      Given an API to search and modify it.
+
+                Dom Elements
+                    - Element is Object type you get after making query to browser with DOM
+                        - element.innerHTML
+                        - element
+            */
+
+            // Setting class attribute of #Hello div
+            helloDiv.setAttribute("class", "banana-class");
+
+            /*
+                Events and addEventListener
+                    - Events are fired when something occurs on the page
+                    - Common events:
+                        - Clicking something
+                        - Hovering over element
+                        - Resizing the screen
+                        - Pressing on a button on a keyboard
+                    - Mainly used to trigger code. Each event contains data
+                      about the event itself, (e.g. location, element affected, data input, etc.)
+                    
+                addEventListener
+                    - 2 common arguments
+                        1. Type: String representing the type of event looking for
+                            - e.g. click, keydown
+                        2. Callback: Function that is called when the event is fired
+                            - Can take the event as an argument, itself
+                                element.addEventListener("click", () => console.log("Clicked!"));
+            */
+
+            // Want to randomly generate value 1-6, after clicking button
+            const rollDiceButton = document.getElementById("roll-dice");
+            const answerDiv = document.getElementById("answer");
+            rollDiceButton.addEventListener("click", () => {
+                answerDiv.textContent = Math.round(Math.random() * (6 - 1)) + 1;
+            })
+
+
+            /*
+                Pseudo Code: Event Listener
+
+                function addEventListener(type, callbackFunc) {
+                    if (type === event.type) {
+                        callbackFunc(event);
+                    }
+                }
+            */
+            const randomNumInput = document.getElementById("random-number-input");
+            const warning = document.getElementById("warning");
+            // Event listener is passing in event into callback function
+            randomNumInput.addEventListener("keydown", function(event) {
+                console.log(event);
+                const inputValue = event.target.value;
+                if (!(Number(inputValue))) {
+                    warning.textContent = `${inputValue} is not a number.`;
+                } else {
+                    answerDiv.textContent = Math.round(Math.random() * inputValue);
+                    warning.textContent = "";
+                }
+            })
+
+            /*
+                DOM Window
+                    - Controls how the browser behaves
+                    - Won't use in this class, but important
+            */
+        </script>
+    </body>
+</html>

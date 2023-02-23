@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <title>Lecture 6 Code</title>
+    </head>
+
+    <body>
+        <div>Hello, there</div>
+
+        <script>
+            const word = "banana";
+            console.log(word);
+
+            /*
+                Declaring a Variable
+                    - var: delcares global variable -- not used anymore
+                    - const: local variable that canNOT be reassigned
+                        - does NOT mean immutable; can be changed, just not reassigned
+                    - let: local variable that can be reassigned
+            */
+
+            /*
+                Types
+                    7 Primitive Types
+                        1. Boolean
+                        2. Null -- pointer
+                        3. Undefined (variable without value)
+                        4. Number
+                        5. BigInt
+                        6. String
+                        7. Symbol
+
+                    And Object type
+                        - Everything in JavaScript is an Object
+            */
+            const foodColors = {
+                banana: "yellow",
+                apple: "red",
+                foodProcessor,
+                howManyApplesDoIHave: 10,
+                complexKiwi: {
+                    color: "green",
+                    flavor: "citrus",
+                },
+            };
+
+            /*
+                Dynamically Typed
+                    - Can reassign different types to the same variable
+                        - e.g. Can start as number and change to string
+            */
+
+            function printAnyType(arg) {
+                console.log("Printing any type:", arg);
+            }
+
+            printAnyType("string")
+            printAnyType(1);
+
+            /*
+                Equality and Sameness
+                    - For strict equality, use '==='
+                        - Will NOT change the type for comparison
+                    - For non-strict equality, use '=='
+                        - Will coerce type of one operand to match the type
+                          of the other for comparison
+            */
+
+            console.log("1 == '1':", 1 == '1');
+            console.log("1 === '1':", 1 === '1');
+
+            /*
+                Objects
+                    - Almost all data in JS represented as an object
+                    - Can access values using dot and array notation
+                    - Data Types
+                        - Can store multiple data types as values within
+                          a single Object
+            */
+
+            console.log("foodColors.banana", foodColors.banana);
+            console.log("foodColors[\"apple\"]", foodColors["apple"]);
+            // Prints undefined, since not yet stored in object
+            console.log("foodColors.kiwi", foodColors.kiwi);
+            console.log("foodColors", foodColors);
+
+            function foodProcessor(food1, food2) {
+                return `${food1} ${food2}`;
+            }
+
+            /*
+                Arrays
+                    - 0-indexed
+                    - Essentially objects with numeric keys
+            */
+            const books = [];
+            books.push("Pride and Prejudice");
+            books.push("The Bible");
+            printAnyType(books);
+            printAnyType(books.pop());
+
+            /*
+                Functions
+                    - Declare functions using:
+                        1. keyword 'function'
+                            function food(arg1) {}
+                        2. declare as variable
+                            - Make sure to declare as const,
+                              so canNOT be reassigned. Otherwise,
+                              hackers can make it unusable
+            */
+            let funFunFunction = function(arg) {
+                return arg + '!';
+            };
+
+            funFunFunction = function(arg1, arg2 = "apple") {
+                return `${arg1} ${arg2}`;
+            }
+
+            console.log(funFunFunction("banana"));
+
+            /*
+                Callback Functions
+                    - Function references passed into a different function,
+                      which are later called within that function
+            */
+            function handleMathLogic(arg1, arg2, func) {
+                return func(arg1, arg2);
+            }
+
+            function subtractionFunc(num1, num2) {
+                return num1 - num2;
+            }
+
+            function multiplicationFunc(num1, num2) {
+                return num1 * num2;
+            }
+
+
+            // Passing in function reference (NOT calling function)
+            // to be used within handleMathLogic
+            console.log(handleMathLogic(5, 10, subtractionFunc));
+            console.log(handleMathLogic(5, 10, multiplicationFunc));
+
+            /*
+                Hoisting
+                    - Behind the scenes, JS will move functions to top
+                      of the file
+                        - ONLY so long as using function funcName() {}
+                          syntax. If assign to variable, will NOT work.
+            */
+
+            /*
+                Template String
+                    - Use grave accents (`...`) to call JS within strings
+            */
+
+            const favFruit = "strawberry";
+            console.log(`My favorite fruit is the ${favFruit}.`);
+
+            /*
+                truthy/falsy
+                    - All values will evaluate to true or false, in certain contexts
+                    - Falsy Values
+                        - false
+                        - undefined
+                        - null
+                        - 0
+                        - NaN
+                        - "" (empty string)
+            */
+            function printTruthy(arg) {
+                if (arg) {
+                    console.log("I am truthy!", arg);
+                } else {
+                    console.log("I am falsy. :(", arg);
+                }
+            }
+
+            printTruthy(0);
+            printTruthy(-1);
+            printTruthy({});
+            printTruthy([]);
+            printTruthy("      ");
+            printTruthy(null);
+
+            /*
+                Control Flow and Loops
+            */
+            switch(favFruit) {
+                case "banana":
+                    console.log("My favorite fruit is the banana");
+                    break;
+                case "grapes":
+                    console.log("My favorite fruit is the grape.");
+                    break;
+                case "strawberry":
+                    console.log("My favorite fruit is the strawberry.");
+                    break;
+                default:
+                    console.log("Please type in a valid fruit");
+                    break;
+            }
+
+            /*
+                for ... in Loop
+                    - Used to iterate over keys in Objects
+
+                for ... of Loop
+                    - Returns values of iterables (used for things OTHER THAN objects)
+            */
+        </script>
+    </body>
+</html>
