@@ -1,0 +1,16 @@
+#color-box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 1%;
+}
+
+#color-input {
+    margin: 0% 1%;
+}
+
+#error-message {
+    color: red;
+    margin: 1%;
+}
