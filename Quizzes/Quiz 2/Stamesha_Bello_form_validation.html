@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Form Validation</title>
+    <script type="text/javascript">
+      function validate(event) 
+	{
+	// write your code here
+  event.preventDefault();
+  console.log(event.target);
+  let errorMessage = '';
+  const [name, email, phone, subject] = event.target;
+  console.log(name.value, email.value, phone.value, subject.value);
+
+  if (!name.value) {
+    errorMessage += "Name cannot be empty.";
+  } else {
+    if (/\d/.test(name.value)) {
+      errorMessage += "Name cannot have numbers.";
+    }
+
+    if (name.value.length <= 2) {
+      errorMessage += " Name must have more than 2 characters.";
+    }
+  }
+
+  if (!email.value) {
+    errorMessage += " E-mail cannot be empty."
+  } else {
+    if (!/[\w\d]+@[\w\d]+\.[\w]+/.test(email.value)) {
+      errorMessage += " Please enter valid email id.";
+    }
+  }
+
+  if (!phone.value) {
+    errorMessage += " Phone cannot be empty.";
+  } else {
+    if (!/\d{10}/.test(phone.value)) {
+      errorMessage += " Phone number should be 10 digits.";
+    }
+  }
+
+  if (subject.value === '0') {
+    errorMessage += " Subject must be selected.";
+  } else {
+  }
+
+  error = document.getElementById("demo");
+  error.textContent = errorMessage;
+}
+   </script>
+  </head>
+  <body>
+    <form action="" name="myForm" onsubmit="return(validate(event));">
+      <h1 align="center">USER REGISTRATION</h1>
+      <table align="center" cellspacing="3" cellpadding="3" border="3">
+        <tr>
+          <td align="right">Name</td>
+          <td><input type="text" name="name" id="name"/></td>
+        </tr>
+        <tr>
+          <td align="right">E-mail</td>
+          <td><input type="text" name="email" id="email"/></td>
+        </tr>
+        <tr>
+          <td align="right">Phone Number</td>
+          <td><input type="text" name="phone" id="phone"/></td>
+        </tr>
+        <tr>
+          <td align="right">Subject</td>
+          <td>
+            <select name="subject" id="subject">
+              <option value="0" selected>Select</option>
+              <option value="1">HTML</option>
+              <option value="2">JavaScript</option>
+              <option value="3">CSS</option>
+              <option value="4">JSP</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <p id="demo" style="color: red; text-align: center"></p>
+      <div style="text-align: center">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
+
