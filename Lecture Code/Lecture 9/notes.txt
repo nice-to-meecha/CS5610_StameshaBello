@@ -1,0 +1,253 @@
+Fullstack Overview
+    Course Overview
+        - HTML
+        - Web Design
+        - CSS
+        - JavaScript
+        - React
+        - Everything we've done so far has all been based in the browser
+            - Not making API calls to another service
+        - Apps don't just live in browser!
+            - Make dozens or hundreds of network requests
+            - Tracking activity
+            - Download images
+            - e.g. When going to Amazon, look at Network tab. Will
+              see everything you're downloading from Amazon's servers
+    
+    What is Frontend?
+        - Everything we've done so far
+            - Styling, templates, user logic
+            - Client-side
+
+    Backend?
+        - Server-side
+        - Everything that happens away from browser
+        - Ex
+            - Java, Python, Node.js, PHP, etc
+            - Usually handles more complex business logic, security
+
+    Frontend vs Backend
+        - Can think of it as the following:
+            - Frontend is storefront; may go to warehouse (backend)
+              to see how many items you have, bring that data back
+              and tell customer
+    
+    Fullstack Architecture: MVC (Model View Controller)
+        - Separating out series of concerns
+            - Model - Data want to store - MongoDB
+            - Control - Backend - Node.js
+            - View - What user interacts with (frontend) - React
+
+    MVC Example
+        - 
+        - Frontend would only display whether if answer was correct
+
+    HTTP
+        - HTTP - HyperText Transfer Protocol
+            - HyperText - References to other documents
+            - Transfer - taking one thing and moving it to another place
+            - Protocol - set of rules
+        - Set of rules that determines how we send and receive information
+
+    HTTP Example
+        - We use HTTP *all* the time
+            1. User goes to website
+            2. Once Amazon servers receive request, server builds a response
+            3. Returns HTML document (serving the document to you)
+                - Might contain data that contains references to other
+                  documents (like Java)
+            4. Referenced documents may also have references to other
+               documents
+
+    HTTP
+        - Designed in early 90s
+        - Based on client-server Model
+            - Browser will send request
+            - Call and response (or request and response)
+        - Stateless - if make multiple HTTP requests, should
+          not affect one another
+            - Will discuss cookies later that change that
+
+    HTTP Request Example
+        - Request type
+        GET / HTTP/1.1 (version type)
+        Host: developer.mozilla.org
+        Accept-Language: fr
+        - Has metadata, like host from which it comes
+
+    HTTP Response Example
+        HTTP/1.1 200 OK
+        Date
+        Server: Apache (Server type)
+        Last-Modified: Tue (date last modified)
+        ETag: (unsure)
+        Accept-Ranges: bytes
+        Content-Length: 29033
+        Content-type: text/html
+        - Status codes
+            - 200 is normal response
+
+    HTTP Headers
+        - HTTP requests
+        - Additional info included in HTTP response or request
+            - Set-Cookies/COokues - Unique info about a user to determine
+              who's logged in
+            - User-agent: details technology (browser, OS) made request
+              on client side
+            - Host:
+            - Domain
+        - Request Header
+            - Data client sends to server
+        - Response Header
+            - Data server sends back to client
+
+    HTTP Request Methods/Verbs
+        - HTTP 
+            - GET - retrieving data from server/API
+            - POST - creating a new resource
+            - PUT - updating an existing resource
+            - DELETE - removing reference to that resource
+
+    HTTP Request Method Example
+        - Social Media Site:
+            - You upload photo to app. You're creating new resource,
+              so POSTing it to the website
+            - You want a friend to view it, so you send them the link.
+              They're requesting existing data (not creating it), so
+              GETting data
+            - You realize typo on caption of photo. You want to fix
+              it and update it. PUT request (modifying something
+              that already exists)
+            - Then, after some time, the clothes you were wearing in
+              picture are now out of style, the photo is removed
+              from the app. DELETE request.
+
+    RESTful APIs
+        - RESTful API is one that respects the terminology of the API
+            - e.g. When delete photo from social media, if implementation
+              just copies photo to another database instead of deleting,
+              that is not respecting the API.
+        - Want code to be straightforward and clear -- no side effects
+            - Just needs to do what it says it dozens
+
+    Other Has
+        - Safe - request doesn't change the state of the server
+            - GET is *only* safe method, since it should not change
+              the state of the server
+              - 
+        - Idempotency - method will leave server in same state, which
+          doesn't _______
+            - PUT, GET, DELETE
+
+    HTTP Response codes
+        - 100-199 - represent info responses (not common)
+        - 200-299 - successful response (200 most common)
+        - 300-399 - redorect (e.g. URL has changed, etc)
+        - 400-499 - client error
+            - 404 is common - means requesting resource that
+              doesn't exist (error of person requesting data)
+        - 500-599 - server error
+            - Something bad or unexpected happened on server side
+
+    AJAX
+        - AJAX - Asynchronous JavaScript and XML
+        - Allows websites to make incremental changes without 
+          reloading site
+            - Updating based on new data you're receiving
+            - e.g. Search Bar; when look in Elements of DevTools,
+              when type letter, sends input to server, responds back
+              with most common searches containing those words, and
+              will then update with info sent back
+
+    Anatomy of URL
+        - Will have URL for client-side site and URL for server
+        - ex: http://www.example.com:80/resource/specificResource?key1=value&key2=value#SomewhereInTheDocument
+            - http: protocol (rules) browser must use when making
+              a request
+            - www.example.com - domain name; represents the web server
+              being requested
+            - :80 - port; location where interact with server
+            - "resource" and "specificResource" - name of thing requesting
+                - resource
+                - specificResource - unique identifier to locate a
+                  specific item
+            - ?key1=value&key2=value - query parameters
+                - Optional arguments can include in URL; usually used for Tracking
+                - URL should be able to work without query params
+            - #SomewhereInTheDocument - links to specific element on the web page
+                - When click on a link with this id, will automatically
+                  scroll down to the linked document
+
+Introduction to Node
+    - Java, Python considered backend languages
+        - Data processing, handling requests, etc
+    Node.js 
+        - Backend version of JavaScript
+        - Made to make it easier for frontend engineers to
+          work in the backend
+        - Created in response to Apache HTTP
+        - Can handle multiple simultaneous requests
+    
+    Why Node.js
+        - Free, open-source, workds in many environments
+        - Performs well in straightforward apps, but struggles
+          with more complex tasks
+        - Minimizes context switching between frontend and Backend
+        - Can also use TypeScript, CoffeeScript, LiveScript, etc
+            - Can convert in js
+        - Lots of great 3rd party
+
+    Making Requests to servers
+        - Need to get comfortable making requests withOUT use of
+          browser -- browsers can only make GET requests
+            - cURL (client/URL): curl command, via command line
+        - Can use RESTED or PostIt(?) or PostMan??
+            - Use to make requests via browser extension
+
+    npm
+        - npm init - Creates a new file (package.json)
+            - Makes package.json
+                - scripts: commands following 'npm', which can
+                  be used to execute more complex commands with aliases
+                - Used to allow others downloading code to have
+                  correct packages
+    
+    Express.js
+
+    Nodemon
+        - npm install -g Nodemon
+            - 'g': stands for 'global'; can use anywhere on your computer
+
+    Modules
+        - In React, used "import X from 'Y'" syntax
+            - Can only be used with new versions of Node
+    
+    How to Create Proper Export
+        - module.exports = // exported function, var, etc //
+
+    Express Order Matters!
+        - If you define 2 get/post/put/delete methods with
+          the same path, only the first will work!
+
+    Putting the M and C into MVC
+        - Model - storing data
+        - Controller - 
+        - View - buttons, keyboard inputs
+        - Any router logic in Node/Express typically considered
+          part of controller and should be separated into separate
+          controller folder
+        - Likewise, if model (temporary or in database) should be
+          in model folder
+        - If app is big enough, can further organize
+
+    Query Params
+        - Optional arguments in URL. Typically used to search
+          for something, but not specific resource
+        - Even without them, URL should return successful response
+
+    How Does Node Handle Query Params?
+        - req.query.[attribute]
+
+    Path Params 
+        - resoureces and specificResources necessary for URL
+          to work properly
