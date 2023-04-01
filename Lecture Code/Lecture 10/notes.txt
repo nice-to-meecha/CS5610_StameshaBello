@@ -1,0 +1,39 @@
+Axios vs Fetch
+    - When want to make a network request, JS has built-in functionality
+      that allows
+
+Promise
+    - Object that takes some time to resolve
+    - Way of chaining data; can handle more cleanly
+        - Everything's in flat structure, in comparison
+          with "Callback Hell", which implies a Callback
+          that calls a callback that calls a callback...
+
+Callback
+    - Function that's passed into functions
+    - 
+
+Async/Await
+    - Most modern form of handling asynchronous requests
+
+MongoDB
+    Node App
+        - Data is temporary in Node app; once restart the server,
+          the data is lost
+
+    MongoDB
+        - It is a NoSQL db that stores JSON-like documents
+            - Essentially, have key and then JSON values
+        - We'll start with local
+
+Mongoose
+    - ORM - object relational model
+    - Connects Node code and MongoDB
+    - Creates schema, so we can be explicit with what we want
+      our data to look like
+
+Mongoose Terminology
+    - Schema - data structure of data (what we can data to look like)
+        - Can be explicit, even though MongoDB is NoSQL and can have
+          loose data types
+    - Model - how we interact with the data
