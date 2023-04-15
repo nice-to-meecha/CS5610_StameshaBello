@@ -1,3 +1,6 @@
 [submodule "Assignments/Projects/stamesha-bello-project2"]
 	path = Assignments/Projects/stamesha-bello-project2
 	url = https://github.com/nice-to-meecha/stamesha-bello-project2
+[submodule "Assignments/Projects/stamesha-bello-project3"]
+	path = Assignments/Projects/stamesha-bello-project3
+	url = https://github.com/nice-to-meecha/stamesha-bello-project3.git

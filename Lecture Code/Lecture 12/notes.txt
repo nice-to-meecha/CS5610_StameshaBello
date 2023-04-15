@@ -1,0 +1,217 @@
+Axios vs Fetch
+    - When want to make a network request, JS has built-in functionality
+      that allows
+
+Promise
+    - Object that takes some time to resolve
+    - Way of chaining data; can handle more cleanly
+        - Everything's in flat structure, in comparison
+          with "Callback Hell", which implies a Callback
+          that calls a callback that calls a callback...
+
+Callback
+    - Function that's passed into functions
+    - 
+
+Async/Await
+    - Most modern form of handling asynchronous requests
+
+MongoDB
+    Node App
+        - Data is temporary in Node app; once restart the server,
+          the data is lost
+
+    MongoDB
+        - It is a NoSQL db that stores JSON-like documents
+            - Essentially, have key and then JSON values
+        - We'll start with local
+
+Mongoose
+    - ORM - object relational model
+    - Connects Node code and MongoDB
+    - Creates schema, so we can be explicit with what we want
+      our data to look like
+
+Mongoose Terminology
+    - Schema - data structure of data (what we can data to look like)
+        - Can be explicit, even though MongoDB is NoSQL and can have
+          loose data types
+    - Model - how we interact with the data
+
+Authentication vs Authorization
+    - Aunthentication - The process of using identifying information
+      to determine who user is
+        - 2FA (2 Factor Authentication) - Using 2 processes to identify user
+    - Authorization - Determines what the user has access to
+        - Determines what user can do or what they can see
+
+Authentication: SFA, 2FA, RedFA
+    - SFA (Single-Factor Authentication) - username and password
+    - 2FA (Two-Factor Authentication) - (1) username and password,
+      (2) additional piece of info (unique key sent to phone, etc)
+    - Multi-Factor Authentication - In addition to 2FA, use another
+      form of identification (e.g. biometrics, like fingerprint, facial recognition)
+
+Cookies
+    - Cookie is header used to uniquely & securely identify user
+      when logged in
+    - If send CORS request, will not send cookies
+    - Metadata (header) that confirms or verifies who you are
+        - Transferred with each HTTP/S request, within the request header
+    - Cookie - Series of key-value pairs (like hashmap), where each
+      key refers to a unique value
+        - Extra data included in all requests
+
+Local Storage
+    - Data stored entirely on your browser
+        - Can see Local Storage within Application tab of devtools
+
+Local Storage vs Cookie
+    - Cookie data is unique to user
+        - Included with API requests
+        - Will largely be the same between devices
+    - Local Storage is unique to device
+        - Only stays in browser
+
+    - Given the local storage question -- how much memory would the browser
+      have available? Would it be possible to overwrite the info stored,
+      after some time
+
+Code Setup
+    - Cookies cannot travel against diff URLs
+        - Frontend and backend 
+    - Need to add localhost:<port>/ to proxy
+        - Will pretend like frontend and backend have same URL
+        - Also allows
+    - Create cookie in backend; do not need to alter frontend
+        - Backend makes browser/frontend remember cookie in subsequent requests
+    - Not supposed to access cookie info from browser/frontend
+        - Need to set up API, if want cookie information
+        - If want header that shows if logged in, will need to
+          use API call to determine if logged in
+
+Log In/Out
+    - When user logged out, should have diff experience
+      from when logged in
+
+JWT (JSON Web Token - token-based authentication)
+    - Stored all relevant user info (userID, username, etc) in token
+      that 
+    - When create cookie, creates unique identifier for cookie
+    - Essentially, encrypting/decrypting account
+
+Sessions
+    - Randomly generate token for user, when log in
+        - Store that for user in DB, instead of constant en-/decryption
+
+
+
+Fullstack Development
+    - Server - Program that sits there and waits for requests; responds to them
+    - With our project, have 2-3 servers running on one computer
+        1. React code
+        2. Node server
+        3. MongoDB (if running locally)
+
+Problem Statement
+    - Issues that may arise with multiple servers
+        - CORS (cross origin request scripting)
+            - Security risk
+            - Can indicate from which servers can receive requests
+        - App not properly tracking cookies
+            - Cookies only work with same server on which they were set
+        - Hard to work with 2 repos at once
+        - Need to make sure code configured correctly and using correct ports
+        - Everytime look at React page, React has to convert code to HTML/JS,
+          which is very inefficient
+
+Looking Back
+    - In project 2, React server maintained code
+        - When typed start, React server would start and all changes would
+          regenerate HTML
+
+Project 3
+    - 2-3 servers
+
+Monorepo
+    - Can have multiple packages/libraries exist within parent package
+        - Mainly JavaScript concept
+    - Code organization
+        - Root (top-level)
+            - package.json
+                ** Managing monorepo; used to control the other package.jsons
+                ** Add "workspaces"
+                    "workspaces": [
+                        "backend",
+                        "frontend"
+                    ]
+                    *** Can then use within scripts to run separate commands for each workspace
+                    "dev": concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"
+                        **** "-w" means will only run code in one folder
+                        **** concurrently is an npm package that will run commands simultaneously
+            - package-lock.json
+            - frontend/
+                - package.json
+            - backend/
+                - package.json
+
+NPM Monorepos
+    - Can use -ws to run command on all sub repos/modules
+
+*** Cannot run on multiple servers, but also can't run from one server, as is
+Deploying our App
+    - Workaround for deployment; instead of running react server, will generate HTML from React app
+        - Then, deliver HTML through Node server instead
+    - "npm run build" command in React (frontend/)
+        - Creates a dist/ directory (stands for "distribution")
+        - This is the HTML build
+            - index.html imports all CSS and HTML into a CSS file and HTML file, respectively
+                - Uses "minification" (everything is on one line; no spaces;
+                  when only for computer to read, saving space by not adding
+                  extraneous characters)
+                - If open index.html on browser, should work (as long as don't get CORS error)
+        - Need a way to add to browser
+
+let frontend_dir = path.join(__dirname, "..", "frontend", "dist"); // gets you to dist/ directory
+    ** __dirname: gives you current directory name
+
+app.use(express.static(frontend_dir)); // Loads up 
+app.get("*", function(req, res) {
+    console.log("")
+    res.sendFile(path.join(frontend_dir, "index.html")) // When get any requests from unhandled URL,
+                                                        // will take to home page
+})
+
+Deployment on Render
+    *** Must be public repo on GitHub
+    - Click "New +"
+    - Name: unique name
+    - Region: don't care
+    - Branch: main
+    - Runtime: Node
+    - Build COmmand: npm install && npm run build
+        - npm install: Ensures all packages are installed (like axios)
+        - npm run build -ws --if-present
+            - Checks all workspaces (-ws) and runs the previous command ("npm run build")
+    - Start Command: npm run prod
+    - Advanced Section
+        - Add Environment Variable
+            - Environment Variable: Variable available to server
+            - NODE_VERSION: 16.15.1
+                ** Can be found by typing node -v
+                ** Ignore "v" in v16.15.1
+            - MONGODB: "~~~"
+                ** I think it's the endpoint, but I'm not sure
+
+- In server.js file
+    - Add app.listen(process.env.PORT || 8000), so that will listen on
+      port stored on computer or 8000, if not
+
+To use process.env
+    - Add .env file in root(?) folder
+
+For image
+    - Store LOCALLY on Render server
+        - Otherwise, will end up running out of memory very quickly
+        - Save it in same directory as APIs
+
